@@ -1,16 +1,55 @@
-<form>
-  <div class="col-2 p-3 form-group row">
-    <label for="nomepaciente" class="form-label">CEP:</label>
-    <input type="text" id="nomepaciente" class="form-control" mask="00.000-000">
-  </div>
+<form class="row m-1 mt-3 col-lg-8 p-2">
 
-  <div>
-    <button class="btn btn-danger col-2">Consultar CEP</button>
-  </div>
+  <div class="mb-3 input-group w-50">
+    <label for="ceppaciente" class="form-label me-2">CEP:</label>
+         <input id="ceppaciente " type="text" class="form-control" mask="00000-000"
+         placeholder="Informe o CEP" aria-label="Recipient's username" aria-describedby="basic-addon2"
+         [(ngModel)]="cep.cep" name="ceppaciente">
 
-  <div class="col-2 p-3 form-group row">
-    <label for="nomepaciente" class="form-label">Endereço:</label>
-    <input type="text" id="nomepaciente" class="form-control">
-  </div>
+         <div class="input-group-append">
+          <button class="btn btn-danger" type="button" (click)="consulta()">Consultar</button>
+        </div>
 
+      </div>
+
+    <div class="row col-10 me-3">
+      <label for="eenderecoLogradouroPaciente" class="form-label">Logradouro:</label>
+      <input type="text" id="enderecoLogradouroPaciente" class="form-control ms-2"
+      [(ngModel)]="cep.logradouro" name="logradouro">
+    </div>
+
+    <div class="row col-2">
+      <label for="enderecoNumPaciente" class="form-label">N°:</label>
+      <input type="text" id="enderecoNumPaciente" class="form-control ms-2">
+    </div>
+
+      <div class="row col-6 me-3 mt-3">
+        <label for="enderecoCompPaciente" class="form-label">Complemento:</label>
+        <input type="text" id="enderecoCompPaciente" class="form-control ms-2"
+        [(ngModel)]="cep.complemento" name="complemento">
+      </div>
+
+      <div class="row col-6 mt-3">
+        <label for="enderecoBairroPaciente" class="form-label">Bairro:</label>
+        <input type="text" id="enderecoBairroPaciente" class="form-control ms-2"
+        [(ngModel)]="cep.bairro" name="bairro">
+      </div>
+
+      <div class="row col-6 me-3 mt-3">
+        <label for="enderecoCidadePaciente" class="form-label">Cidade:</label>
+        <input type="text" id="enderecoCidadePaciente" class="form-control ms-2"
+        [(ngModel)]="cep.localidade" name="localidade">
+      </div>
+
+      <div class="row col-1 me-3 mt-3">
+        <label for="enderecoUfPaciente" class="form-label">UF:</label>
+        <input type="text" id="enderecoUfPaciente" class="form-control ms-2"
+        [(ngModel)]="cep.uf" name="uf">
+      </div>
+
+      <div class="row col-5 mt-3">
+        <label for="enderecoIbgePaciente" class="form-label">Código IBGE:</label>
+        <input type="text" id="enderecoIbgePaciente" class="form-control ms-2"
+        [(ngModel)]="cep.ibge" name="ibge">
+      </div>
 </form>
