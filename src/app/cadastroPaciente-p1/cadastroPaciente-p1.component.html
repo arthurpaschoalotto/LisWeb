@@ -1,0 +1,81 @@
+<div class="margem">
+  <div class="borda col-lg-8 p-3">
+    <form #f="ngForm" class="row" (ngSubmit)="onSubmit(f)"> <!--ngsumit vai puxar o metodo salvar, pelo botão typo submit-->
+
+      <div class="row mb-3">
+          <div class="col-3">
+            <div class class="input-group">
+              <span class="input-group-text bg-white border-0 p-0 pe-3">Codigo:</span>
+              <span disabled class="form-control rounded-start" >{{paciente.codigopaciente}}</span>
+            </div>
+          </div>
+      </div>
+
+        <div class="col-6 mb-3">
+          <label for="nomepaciente" class="form-label">Nome:</label>
+          <input type="text" id="nomepaciente" class="form-control" [(ngModel)]="paciente.nomepaciente" name="nomepaciente">
+        </div>
+
+        <div class="col-3 mb-3">
+          <label for="datanascimentopaciente" class="form-label">Data de nascimento:</label>
+          <input type="date" id="datanascimentopaciente" class="form-control" name="datanascimentopaciente"
+          [(ngModel)]="paciente.datanascimentopaciente"
+          (change)="calculaIdade()">
+        </div>
+
+        <div class="col-3 mb-3">
+          <label for="idadepaciente" class="form-label">Idade:</label>
+          <input disabled class="form-control" name="idadepaciente" [(ngModel)]="paciente.idadepaciente">
+        </div>
+
+        <div class="col-3 mb-3">
+          <label for="rgpaciente" class="form-label">RG:</label>
+          <input type="text" id="rgpaciente" class="form-control"  mask="00.000.000-0"[(ngModel)]="paciente.rgpaciente" name="rgpaciente">
+        </div>
+
+        <div class="col-3 mb-3">
+          <label for="cpfpaciente" class="form-label">CPF:</label>
+          <input type="text" id="cpfaciente" class="form-control" mask="000.000.000-00" [(ngModel)]="paciente.cpfpaciente" name="cpfpaciente">
+          </div>
+
+          <div class="col-3 mb-3">                                                    <!-- ngmodel vai puxar o valor input, tem que criar name para funcionar-->
+          <label for="sexopaciente" class="form-label">Sexo:</label>
+          <input list="listsexopaciente" id="sexopaciente" class="form-control" [(ngModel)]="paciente.sexopaciente" name="sexopaciente">
+
+            <datalist id="listsexopaciente">
+            <option value="Masculino">
+            <option value="Feminino">
+            <option value="Outros">
+          </datalist>
+        </div>
+
+        <div class="col-3 mb-3">
+          <label for="corpaciente" class="form-label">Cor:</label>
+          <input placeholder="Escolha uma cor" list="listscorpaciente" id="corpaciente" class="form-control" [(ngModel)]="paciente.corpaciente" name="coraciente">
+
+          <datalist id="listscorpaciente">
+            <option value="Branco">
+            <option value="Preto">
+            <option value="Amarelo">
+            <option value="Outros">
+          </datalist>
+        </div>
+
+        <div class="col-6 mb-3">
+          <label for="maepaciente" class="form-label">Mãe:</label>
+          <input type="text" id="maepaciente" class="form-control" [(ngModel)]="paciente.maepaciente" name="maepaciente">
+        </div>
+
+        <div class="col-6 mb-3">
+          <label for="paipaciente" class="form-label">Pai:</label>
+          <input type="text" id="paipaciente" class="form-control" [(ngModel)]="paciente.paipaciente" name="paipaciente">
+        </div>
+
+          <app-cadastro-paciente-p2></app-cadastro-paciente-p2>
+
+          <div class="row justify-content-end">
+            <button type="submit" class="btn btn-danger col-2 ">Salvar</button>
+            </div>
+    </form>
+  </div>
+</div>
