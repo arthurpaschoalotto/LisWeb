@@ -1,0 +1,26 @@
+<table class="table-responsive table table-bordered table-striped p-5">
+  <thead class="table align-middle">
+    <th scope="col" class="p-2">Codigo</th>
+    <th scope="col" class="p-2">Nome</th>
+    <th scope="col" class="p-2">Data de nascimento</th>
+    <th scope="col" class="p-2">RG</th>
+    <th scope="col" class="p-2">CPF</th>
+    <th scope="col" class="p-2">Sexo</th>
+    <th scope="col" class="p-2">Cor</th>
+    <th scope="col" class="p-2">Mãe</th>
+    <th scope="col" class="p-2">Pai</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let Salvar of valorSalvar"> <!-- ngFor vai permitir varios cadastros-->
+      <td>{{Salvar?.codigopaciente}}</td>
+      <td>{{Salvar?.nomepaciente}}</td>
+      <td>{{Salvar?.datanascimentopaciente | date:"shortDate"}}</td>
+      <td>{{Salvar?.rgpaciente}}</td>
+      <td>{{Salvar?.cpfpaciente}}</td>
+      <td>{{Salvar?.sexopaciente}}</td>
+      <td>{{Salvar?.corpaciente}}</td>
+      <td>{{Salvar?.maepaciente}}</td>
+      <td>{{Salvar?.paipaciente}}</td>
+    </tr>
+  </tbody>
+</table>

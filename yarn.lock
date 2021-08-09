@@ -1169,6 +1169,13 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
+"@brunoc/ngx-viacep@^3.3.7":
+  version "3.3.7"
+  resolved "https://registry.yarnpkg.com/@brunoc/ngx-viacep/-/ngx-viacep-3.3.7.tgz#21ce9097273e6913c5945c224f22c9e95493778a"
+  integrity sha512-QltSA2fxwgrP+OMabpi24JJdJ8IJ70oixQAvWthaMnSo7VwVNHL9Dww3GyJblPKyJwrWzyz7YfdOkf1pfFBx5A==
+  dependencies:
+    tslib "^2.0.0"
+
 "@csstools/convert-colors@^1.4.0":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"

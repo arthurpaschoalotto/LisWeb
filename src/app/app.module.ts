@@ -10,9 +10,11 @@ import { FormsModule } from '@angular/forms';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 import {NgxMaskModule} from'ngx-mask';
-import { CabecalhohomeComponent } from './cabecalhohome/cabecalhohome.component';
 import { CadastroPacienteP2Component } from './cadastro-paciente-p2/cadastro-paciente-p2.component';
 import { EnderecopacienteComponent } from './cadastro-paciente-p2/enderecopaciente/enderecopaciente.component';
+import { ContatospacienteComponent } from './contatospaciente/contatospaciente.component';
+import { AbalateralComponent } from './abalateral/abalateral.component';
+import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 
 registerLocaleData(localePt, 'pt')
 
@@ -21,9 +23,11 @@ registerLocaleData(localePt, 'pt')
     AppComponent,
     cadastropacienteComponent,
     CadastrospacientesComponent,
-    CabecalhohomeComponent,
     CadastroPacienteP2Component,
     EnderecopacienteComponent,
+    ContatospacienteComponent,
+    AbalateralComponent,
+    CabecalhoComponent,
   ],
   imports: [
     BrowserModule,

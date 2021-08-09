@@ -1,2 +1,8 @@
-<app-cadastroPaciente-p1 (aoSalvar)="salvar($event)"></app-cadastroPaciente-p1> <!-- Recebe valor pelo evento-->
-<app-cadastro-paciente-p2></app-cadastro-paciente-p2>
+<div>
+      <app-cabecalho></app-cabecalho>
+  <app-abalateral style="position: fixed; height: 100%;" class="col col-sm-2 float-lg-start bg-dark"></app-abalateral>
+  <div class="col col-sm-10 float-lg-end bg-white p-3 bg-white">
+    <app-cadastroPaciente-p1 (aoSalvar)="salvar($event)"></app-cadastroPaciente-p1> <!-- Recebe valor pelo evento-->
+    <app-cadastrospacientes [valorSalvar] = "valorSalvar"></app-cadastrospacientes> <!--Poder apresentar o valor salvo-->
+  </div>
+</div>
