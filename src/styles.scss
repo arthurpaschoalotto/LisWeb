@@ -4,5 +4,6 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-@import '~@angular/material/prebuilt-themes/purple-green';
 @import '~@fortawesome/fontawesome-free/css/all.css';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~bootstrap/dist/css/bootstrap.min.css';
