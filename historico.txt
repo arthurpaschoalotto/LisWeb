@@ -1,0 +1,436 @@
+    1  $ sudo apt install npm
+    2  sudo pacman -S npm # also installs nodejs
+    3  curl –sL https://deb.nodesource.com/setup_12.x | sudo -E bash –
+    4  sudo apt install nodejs
+    5  node --version
+    6  npm --version
+    7  sudo apt install npm
+    8  npm install -g @angular/cli
+    9  node v
+   10  npm install -g @angular/cli
+   11  npm b
+   12  npm v
+   13  sudo apt install npm
+   14  npm install -g @angular/cli
+   15  npm --version
+   16  npm install -g @angular/cli
+   17  npm cache clean -f
+   18  npm cache clean --force
+   19  npm install -g @angular/cli
+   20  delete node modules and package-lock.json
+   21  yarn install or npm install
+   22  npm start
+   23  # yum -y install php-pear 
+   24  um -y install php-pear 
+   25  npm install -g @angular/cli
+   26  sudo apt install nautilus-admin
+   27  nautilus -q
+   28  npm install -g @angular/cli
+   29  set registry http://registry.npmjs.org/
+   30  npm -- version
+   31  npm --version
+   32  node --version
+   33  sudo npm install -g eslint
+   34  npm install node-sass --save
+   35  npm install -g @angular/cli
+   36  npm install -g @angular/12.1.2
+   37  npm install -g @angular/cli
+   38  sudo snap install skype
+   39  sudo snap install
+   40  --- /tmp/linuxthreads/spinlock.c        Fri Feb  9 11:04:08 2001
+   41  +++ spinlock.c        Tue Apr  3 14:07:41 2001
+   42  @@ -78,7 +78,9 @@
+   43  -
+   44  +    if(max_count > MAX_ADAPTIVE_SPIN_COUNT)
+   45  +      max_count = MAX_ADAPTIVE_SPIN_COUNT;
+   46  +
+   47  --- internals.h       Fri Feb  9 11:04:08 2001
+   48  +++ internals.h       Tue Apr  3 14:05:53 2001
+   49  @@ -333,7 +333,7 @@
+   50  -#define STACK_SIZE  (2 * 1024 * 1024)
+   51  +#define STACK_SIZE  (128 * 1024)
+   52  @@ -395,6 +395,10 @@
+   53  +#endif
+   54  +
+   55  +#ifndef MAX_ADAPTIVE_SPIN_COUNT
+   56  +#define MAX_ADAPTIVE_SPIN_COUNT 100
+   57  --- /tmp/linuxthreads/sysdeps/unix/sysv/linux/bits/local_lim.hFri Jun  9 13:17:35 2000
+   58  +++ ./sysdeps/unix/sysv/linux/bits/local_lim.hWed Mar 21 17:34:55 2001
+   59  @@ -64,7 +64,7 @@
+   60  -#define PTHREAD_THREADS_MAX1024
+   61  +#define PTHREAD_THREADS_MAX4096
+   62  Installs a tool in your toolchain
+   63  curl https://get.volta.sh | bash
+   64  npm install -g @angular/cli
+   65  clear
+   66  sudo pacman -Syy && sudo pacman -S archlinuxcn-keyring
+   67  sudo pacman-mirrors -c all
+   68  sudo install pacman
+   69  npm -- version
+   70  npm --version
+   71  npm install -g @angular/cli
+   72  sudo npm install -g eslint
+   73  npm install -g @angular/cli
+   74  npm install
+   75  npm install node-sass --save
+   76  sudo chown -R $USER /var/www/html
+   77  #!/bin/bash
+   78  banner1() { clear; sleep 1; echo -e """\033[1;35m
+   79  ########  ######## ######## ########
+   80  ##     ## ##       ##       ##
+   81  ##     ## ##       ##       ##
+   82  ########  ######   ######   ######
+   83  ##     ## ##       ##       ##
+   84  ##     ## ##       ##       ##
+   85  ########  ######## ######## ##
+   86  """; }
+   87  if [ ! -d ~/storage ]; then         termux-setup-storage; fi
+   88  wifi(){ ping -c 1 google.com > /dev/null 2>&1; if [[ "$?" -le 1 ]]; then echo -e "\n\033[1;36m[✔]\033[00m \033[1;31m[\033[1;36mInternet Connection\033[1;31m]\033[1;36m............\033[1;31m[\033[1;36m OK \033[1;31m]\n"; echo; sleep 7; else echo -e "\n\033[1;36m[✔]\033[00m \033[1;31m[\033[1;36mInternet Connection\033[1;31m]\033[1;36m............\033[1;31m[\033[1;36m NOT FOUND \033[1;31m]\n"; echo; sleep 1; exit; fi; }
+   89  if [ -e /data/data/com.termux/files/usr/bin ]; then wifi; banner1; echo -e "\033[1;35mActualizando Termux :3\033[00m\n"; pkg update && pkg upgrade -y; echo -e "\033[1;35mInstalando paquetes...\033[00m"; pkg install -y python; echo -e "\033[1;35mInstalando modulos de python3...\033[00m"; pip install --upgrade pip; pip install -r requirements.txt; sleep 1; else apt install iputils-ping -y &> /dev/null; sleep 1; wifi; banner1; echo -e "\033[1;36mActualizando :3\033[00m\n"; apt update && sudo apt upgrade -y; echo -e "\033[1;35mInstalando paquetes...\033[00m"; apt install python3 python3-pip -y; echo -e "\033[1;35mInstalando modulos de python3...\033[00m"; python3 -m pip install -r requirements.txt; sleep 1; fi
+   90  npm install -g @angular/cli
+   91  clear
+   92  $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+   93  wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+   94  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+   95  vm ls
+   96  nvm ls
+   97  npm install -g @angular/cli
+   98  nvm install node
+   99  vm ls-remote
+  100  nvm ls-remote
+  101  nvm install
+  102  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+  103  sudo apt install curl 
+  104  curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+  105  source ~/.profile
+  106  nvm install node
+  107  nvm install -g @angular/cli
+  108  npm install -g @angular/cli
+  109  ng --version
+  110  clear
+  111  sudo apt install curl
+  112  curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+  113  curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+  114  echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+  115  sudo apt-get update
+  116  sudo apt-get install git-core zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev nodejs yarn
+  117  cd
+  118  git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+  119  echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+  120  echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+  121  exec $SHELL
+  122  git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+  123  echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
+  124  exec $SHELL
+  125  rbenv install 3.0.1
+  126  rbenv global 3.0.1
+  127  ruby -v
+  128  sudo apt-get install libgdbm-dev libncurses5-dev automake libtool bison libffi-dev
+  129  gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+  130  curl -sSL https://get.rvm.io | bash -s stable
+  131  source ~/.rvm/scripts/rvm
+  132  rvm install 3.0.1
+  133  source ~/.rvm/scripts/rv
+  134  clar
+  135  clear
+  136  curl -sSL https://get.rvm.io | bash -s stable
+  137  ruby -v
+  138  wget http://ftp.ruby-lang.org/pub/ruby/3.0/ruby-3.0.1.tar.gz
+  139  tar -xzvf ruby-3.0.1.tar.gz
+  140  ruby-3.0.1/
+  141  ./configure
+  142  make
+  143  sudo make install
+  144  ruby-3.0.1/
+  145  cd ruby-3.0.1/
+  146  ./configure
+  147  make
+  148  sudo make install
+  149  ruby -v
+  150  gem install bundler
+  151  gem install rails -v 6.1.3.2
+  152  rbenv rehash
+  153  rails -v
+  154  cd..
+  155  sudo apt update
+  156  sudo apt install mysql-server -y
+  157  mysql -v
+  158  curl -OL https://dev.mysql.com/get/mysql-apt-config_0.8.12-1_all.deb
+  159  sudo dpkg -i mysql-apt-config*
+  160  sudo apt update
+  161  sudo apt install mysql-server -y
+  162  sudo systemctl status mysql.service
+  163  sudo systemctl start mysql.service
+  164  sudo mysql_secure_installation
+  165  mysql -h host_name -u user -p
+  166  sudo mysqladmin -u root version -p
+  167  cd LisWeb
+  168  Lisweb
+  169  cd Lisweb
+  170  npm i bootstrap font-aw
+  171  npm i bootstrap font-awesome
+  172  ng new Lisweb
+  173  cd 
+  174  cd lisweb
+  175  ng serve
+  176  cd/arthur
+  177  cd Lisweb
+  178  ng serve
+  179  sudo add-apt-repository ppa:linuxuprising/java
+  180  sudo apt update
+  181  su -
+  182  sudo apt install oracle-java16-installer --install-recommends
+  183  su -
+  184  sudo add-apt-repository ppa:linuxuprising/java
+  185  sudo apt update
+  186  su -
+  187  clear
+  188  sudo apt update
+  189  java -version
+  190  Command 'java' not found, but can be installed with:
+  191  apt install default-jre            
+  192  apt install openjdk-11-jre-headless
+  193  apt install openjdk-8-jre-headless 
+  194  sudo apt install default-jre
+  195  clear
+  196  sudo apt install default-jre
+  197  sudo apt update
+  198  java -version
+  199  sudo apt install default-jdk
+  200  javac -version
+  201  java -version
+  202  sudo apt install default-jdk
+  203  java --version
+  204  sudo apt install openjdk-8-jdk
+  205  sudo dpkg --configure -a'
+  206      sudo apt install openjdk-8-jdk
+  207  sudo apt install openjdk-11-jdk
+  208  sudo apt install openjdk-11-jdk
+  209  sudo add-apt-repository ppa:webupd8team/java
+  210  sudo apt -f install
+  211  ng g c home
+  212  ng generate module home --routing -d
+  213  ng generate module home --routing
+  214  sudo gdebi ./netextender_10.2.826-2_amd64.deb 
+  215  sudo dpkg --configure -a
+  216  sudo apt install oracle-java8-installer
+  217  clear
+  218  sudo apt search java
+  219  sudo apt search java | grep -i installer
+  220  sudo apt search java
+  221  grep -i installer
+  222  sudo apt install oracle-java16-installer
+  223  java --version
+  224  cat /etc/resolv.conf
+  225  sudo echo "nameserver 1.1.1.1" >> /etc/resolv.conf
+  226  clear
+  227  nslookup vpn-backup.hotsoft.com.br
+  228  sudo su -
+  229  sudo gedit /etc/resolv.conf
+  230  sudo apt instal vi
+  231  sudo apt install vim
+  232  cat /etc/resolv.conf
+  233  sudo chattr +i /etc/resolv.conf
+  234  tar -zxvf software.ver_7.0.tar.gz
+  235  man tar
+  236  cd downloads
+  237  cd Downloads
+  238  tar xzvf filename.tgz
+  239  tar -xvf ./NetExtender.x86_64.tgz
+  240  cd netExtenderClient/
+  241  cat install
+  242  ./install
+  243  sudo ./install
+  244  cd..
+  245  sudo apt install samba
+  246  sudo apt install samba-client cifs-utils
+  247  sudo gedit /etc/fstab
+  248  sudo mkdir /mnt/WND
+  249  sudo mount -t cifs -o username=<jose.silva> //hs-srv-fs-01/fileserver/<share_name> /mnt/WND
+  250  sudo mount -t cifs -o username=<"jose.silva"> //hs-srv-fs-01/fileserver/<share_name> /mnt/WND
+  251  sudo mount -t cifs -o  
+  252  username=jose.silva,domain=hotsoft.com.br     //hs-srv-fs-01/fileserver/      /mnt/WND
+  253  clear
+  254  sudo mount -t cifs -o  
+  255  sudo mount -t cifs -o username=jose.silva,domain=hotsoft.com.br     //hs-srv-fs-01/fileserver/      /mnt/WND
+  256  sudo chttr -i /etc/resolv.conf
+  257  sudo chattr -i /etc/resolv.conf
+  258  sudo mount -t cifs -o username=jose.silva,domain=hotsoft.com.br     //hs-srv-fs-01/fileserver/      /mnt/WND
+  259  sudo umount /mnt/WND
+  260  cat /etc/resolv.conf
+  261  Sudo apt-get update
+  262  sudo apt-get update
+  263  sudo apt-get install git
+  264  git clone https://github.com/hotsoft-informatica/lisweb_frontend.git
+  265  cd lisweb_frontend
+  266  git checkout develop
+  267  git checkout Development
+  268  git checkout development
+  269  git checkout develop
+  270  git fat
+  271  git fetch
+  272  cd..
+  273  cd ..
+  274  mkdir lisweb
+  275  cd lisweb
+  276  cd ..
+  277  rmdir lisweb
+  278  mkdir projetos
+  279  cd projetos
+  280  git clone https://github.com/hotsoft-informatica/lisweb-ng-frontend.git
+  281  cd lisweb-ng-frontend/
+  282  git checkout develop
+  283  git checkout -B develop_arthur
+  284  git push
+  285  git push --set-upstream origin develop_arthur
+  286  git checkout -B develop_arthur
+  287  hotsoft-fabiano
+  288  git push --set-upstream origin develop_arthur
+  289  yarn
+  290  ng build; ng serve
+  291  code .
+  292  cd projetos/
+  293  cd lisweb-ng-frontend/
+  294  code .
+  295  npm install --save ngx-mask
+  296  ng g c cadastrospacientes
+  297  cd Lisweb/
+  298  code .
+  299  ng serve
+  300  cd Lisweb
+  301  code .
+  302  ng serve
+  303  npm install --save bootstrap. A --save
+  304  clear
+  305  npm install bootstrap
+  306  ng g n cabecalhohome
+  307  ng g c cabecalhohome
+  308  npm install @material
+  309  npm install @material/button
+  310  npm install --save bootstrap. A --save
+  311  npm install bootstrap
+  312  yarn add bootstrap
+  313  ng serve
+  314  yarn add moment
+  315  yarn add angular - moment
+  316  cd Lisweb
+  317  ng serve
+  318  ng g c cadastroPaciente-p2
+  319  ng g c enderecopaciente
+  320  npm i --save @angular/animations
+  321  npm install @material/tabs
+  322  npm install @angular/material/tabs
+  323  npm install @/material/tabs
+  324  npm install @material/tabs
+  325  ng install @material/tabs
+  326  npm install @material/tabs
+  327  npm install @material
+  328  ng add @angular/material
+  329  npm instal ngmodule
+  330  cd Lisweb
+  331  code .
+  332  ng serve
+  333  ng server
+  334  ng serve
+  335  code .
+  336  ng serve
+  337  cd Lisweb
+  338  code .
+  339  ng serve
+  340  npm install @angular/http@latest
+  341  npm install rxjs
+  342  ng -version
+  343  ng -v
+  344  angular -version
+  345  npm install -g tslint
+  346  yarn add @brunoc/ngx-viacep
+  347  ng g service cep
+  348  npm install @angular/http@latest
+  349  yarn add @angular/httl@latest
+  350  nmp -v
+  351  npm -version
+  352  npm install -g npm
+  353  npm install @angular/http@latest
+  354  git add src/app/cadastro-paciente-p2/
+  355  git commit -s -m "Finalizado a tela de endereço com os correspondetes campos e serviço de busca CEP"
+  356  git push
+  357  git add src/app/app.module.ts 
+  358  git commit -s -m "foi importado algumas bibliotecas que sao usadas no consulta CEP"
+  359  git push
+  360  ng g c contatospaciente
+  361  cd Lisweb
+  362  code .
+  363  ng serve
+  364  clear
+  365  ng serve
+  366  code .
+  367  ng serve
+  368  cd Lisweb
+  369  cd code.
+  370  code .
+  371  ng serve
+  372  ng g c cadastrogerme
+  373  npm install material
+  374  ng add @angular/material
+  375  npm install @angular/material/input
+  376  npm install @angular/material
+  377  ng new germes
+  378  code .
+  379  ng serve
+  380  cd germes
+  381  code .
+  382  ng serve
+  383  ng germes
+  384  cd germes
+  385  code .
+  386  ng serve
+  387  cd germes
+  388  ng serve
+  389  ng add @angular/material
+  390  npm uninstall @material-ui/core
+  391  ng add @angular/material
+  392  ng add @angular/material
+  393  yarn add @material-ui/core
+  394  ng add @angular/material
+  395  ng biuld
+  396  ng g c cadastrogermes
+  397  ng add @angular/material
+  398  yarn add bootstrap@latest
+  399  cd projetos
+  400  cd lisweb
+  401  cd lisweb-ng-frontend/
+  402  code .
+  403  cd ..
+  404  cd lisweb_frontend/
+  405  code .
+  406  cd ..
+  407  cd cd Lisweb_cadastropaciente/
+  408  code .
+  409  cd projetos
+  410  ng new germes
+  411  cd germes
+  412  code .
+  413  ng serve
+  414  ng biuld
+  415  ng build
+  416  ng serve
+  417  code .
+  418  ng serve
+  419  ng g m listacadastrogermes --routing
+  420  ng g c listacadastrogermes
+  421  ng g m  --routing cadastrogermes
+  422  ng biuld
+  423  ng build
+  424  ng serve
+  425  cd projetos
+  426  cd germes/
+  427  code .
+  428  ng serve
+  429  code .
+  430  ng serve
+  431  cleab
+  432  clean
+  433  claer
+  434  clear
+  435  history
+  436  history >> historico.txt
