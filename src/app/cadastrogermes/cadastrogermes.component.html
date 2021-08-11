@@ -1,0 +1,50 @@
+<mat-toolbar color="warn">
+  <span>Cadastro de germes</span>
+</mat-toolbar>
+
+<form>
+
+    <div class="p-2">
+        <mat-form-field appearance="fill">
+          <mat-label>Mneumonico</mat-label>
+          <input matInput placeholder="Crie um codigo para o germe"
+          type= "text" id="codigoigo">
+        </mat-form-field>
+    </div>
+
+    <div class="p-2">
+      <mat-form-field appearance="fill">
+        <mat-label>Nome</mat-label>
+        <input matInput placeholder="Nome do germe"
+         type= "text" id="nome">
+      </mat-form-field>
+  </div>
+
+    <div class="p-2">
+      <mat-form-field appearance="fill">
+        <mat-label>Aeróbico</mat-label>
+        <mat-select id="aerobicoerobico">
+          <mat-option value="um">Aeróbico</mat-option>
+          <mat-option value="dois">Anaeróbico</mat-option>
+          <mat-option value="tres">Qualquer</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="p-2">
+      <mat-form-field appearance="fill">
+        <mat-label>Gram</mat-label>
+        <mat-select id="gram">
+          <mat-option value="um">Positivo</mat-option>
+          <mat-option value="dois">Negativo</mat-option>
+          <mat-option value="tres">Qualquer</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="example-button-row col align-self-end">
+      <button mat-flat-button color="warn" type="submit">Salvar</button>
+    </div>
+
+
+</form>
