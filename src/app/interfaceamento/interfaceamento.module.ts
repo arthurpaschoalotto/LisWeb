@@ -11,7 +11,8 @@ import { InterfaceamentoComponent } from './interfaceamento.component';
   ],
   imports: [
     CommonModule,
-    InterfaceamentoRoutingModule
+    InterfaceamentoRoutingModule,
+    NgModule,
   ]
 })
 export class InterfaceamentoModule { }

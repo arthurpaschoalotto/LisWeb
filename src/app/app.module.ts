@@ -19,11 +19,15 @@ import { MatTableModule } from '@angular/material/table';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatSelectModule } from '@angular/material/select';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatRadioModule} from '@angular/material/radio';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    InterfaceamentoComponent
+    InterfaceamentoComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,7 +45,10 @@ import { MatSelectModule } from '@angular/material/select';
     MatSnackBarModule,
     MatFormFieldModule,
     MatNativeDateModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatSlideToggleModule,
+    MatGridListModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

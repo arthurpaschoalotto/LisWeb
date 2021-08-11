@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-interfaceamento',
   templateUrl: './interfaceamento.component.html',
@@ -13,3 +14,4 @@ export class InterfaceamentoComponent implements OnInit {
   }
 
 }
+
