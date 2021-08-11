@@ -21,6 +21,7 @@
     "@angular/platform-browser-dynamic": "~12.1.0",
     "@angular/router": "~12.1.0",
     "@babel/core": "7.15.0",
+    "bootstrap": "^5.1.0",
     "css-loader": "^6.2.0",
     "css-minimizer-webpack-plugin": "^3.0.2",
     "postcss": "7.0.36",

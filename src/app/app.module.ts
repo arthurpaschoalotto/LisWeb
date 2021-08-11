@@ -5,7 +5,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { MatLabel } from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -17,7 +16,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     MatFormFieldModule,
-    MatLabel,
     BrowserAnimationsModule,
   ],
   providers: [],
