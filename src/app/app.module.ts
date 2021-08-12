@@ -1,3 +1,4 @@
+import { ListainterfaceamentosComponent } from './listainterfaceamentos/listainterfaceamentos.component';
 import { InterfaceamentoComponent } from './interfaceamento/interfaceamento.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -6,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
@@ -28,6 +30,7 @@ import {MatRadioModule} from '@angular/material/radio';
   declarations: [
     AppComponent,
     InterfaceamentoComponent,
+    ListainterfaceamentosComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,8 @@ import {MatRadioModule} from '@angular/material/radio';
     MatDatepickerModule,
     MatSlideToggleModule,
     MatGridListModule,
-    MatRadioModule
+    MatRadioModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
