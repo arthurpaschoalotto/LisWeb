@@ -24,6 +24,7 @@ import { MatSelectModule } from '@angular/material/select';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatRadioModule} from '@angular/material/radio';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import {MatRadioModule} from '@angular/material/radio';
     ListainterfaceamentosComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
