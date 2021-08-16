@@ -11,7 +11,8 @@ import { TipoinstrumentoComponent } from './tipoinstrumento.component';
   ],
   imports: [
     CommonModule,
-    TipoinstrumentoRoutingModule
+    NgModule,
+    TipoinstrumentoRoutingModule,
   ]
 })
 export class TipoinstrumentoModule { }

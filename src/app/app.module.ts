@@ -1,5 +1,7 @@
-import { ListainterfaceamentosComponent } from './listainterfaceamentos/listainterfaceamentos.component';
-import { InterfaceamentoComponent } from './interfaceamento/interfaceamento.component';
+import { TipoinstrumentoComponent } from './tipoinstrumento/tipoinstrumento.component';
+import { ListainterfaceamentosComponent } from './cadastrointerfaceamento/listainterfaceamentos/listainterfaceamentos.component';
+import { InterfaceamentoComponent } from './cadastrointerfaceamento/interfaceamento/interfaceamento.component';
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -25,13 +27,16 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatRadioModule} from '@angular/material/radio';
 import { FormsModule } from '@angular/forms';
+import { cadastrointerfaceamento } from './cadastrointerfaceamento/cadastrointerfaceamento.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     InterfaceamentoComponent,
-    ListainterfaceamentosComponent
+    ListainterfaceamentosComponent,
+    cadastrointerfaceamento,
+    TipoinstrumentoComponent
   ],
   imports: [
     FormsModule,
