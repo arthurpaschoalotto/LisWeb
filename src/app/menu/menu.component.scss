@@ -1,0 +1,15 @@
+.m-fadeOut {
+  &{
+    //  visibility: hidden;
+    //  display: none;
+     width: 0;
+     transition: width 3s ease-in-out;
+  }
+  visibility: hidden;
+  opacity: 0;
+}
+.m-fadeIn {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 3000ms;
+}

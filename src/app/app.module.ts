@@ -1,6 +1,7 @@
 import { TipoinstrumentoComponent } from './tipoinstrumento/tipoinstrumento.component';
 import { ListainterfaceamentosComponent } from './cadastrointerfaceamento/listainterfaceamentos/listainterfaceamentos.component';
 import { InterfaceamentoComponent } from './cadastrointerfaceamento/interfaceamento/interfaceamento.component';
+import { MenuComponent } from './menu/menu.component';
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -9,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { MatFormFieldControl } from '@angular/material/form-field';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
@@ -28,6 +30,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatRadioModule} from '@angular/material/radio';
 import { FormsModule } from '@angular/forms';
 import { cadastrointerfaceamento } from './cadastrointerfaceamento/cadastrointerfaceamento.component';
+import {MatTreeModule} from '@angular/material/tree';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 
 @NgModule({
@@ -36,13 +40,17 @@ import { cadastrointerfaceamento } from './cadastrointerfaceamento/cadastrointer
     InterfaceamentoComponent,
     ListainterfaceamentosComponent,
     cadastrointerfaceamento,
-    TipoinstrumentoComponent
+    TipoinstrumentoComponent,
+    MenuComponent
   ],
   imports: [
+    BrowserAnimationsModule,
+    MatSidenavModule,
+    MatTreeModule,
+    MatFormFieldModule,
     FormsModule,
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
     MatMenuModule,
     MatCardModule,
     MatIconModule,
