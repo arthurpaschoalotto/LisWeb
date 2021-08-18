@@ -1,31 +1,3 @@
-<mat-drawer-container class="example-container mat-typography h-100" autosize>
-  <mat-drawer #drawer mode="side" disableClose="true" opened="true" class="example-sidenav">
+<app-cabecalho></app-cabecalho>
+<app-abalateral></app-abalateral>
 
-    <button mat-mini-fab (click)="isExpanded = !isExpanded" color="warn" style="margin: 10px;">
-      <mat-icon aria-label="Menu">menu</mat-icon>
-    </button>
-
-    <mat-nav-list>
-      <mat-list-item>
-        <mat-icon mat-list-icon>person</mat-icon>
-        <h4 mat-line [class.m-fadeOut]="isExpanded" [class.m-fadeIn]="!isExpanded">Management A</h4>
-      </mat-list-item>
-      <mat-list-item>
-        <mat-icon mat-list-icon>assignment</mat-icon>
-        <h4 mat-line [class.m-fadeOut]="isExpanded" [class.m-fadeIn]="!isExpanded">Management B</h4>
-      </mat-list-item>
-      <mat-list-item>
-        <mat-icon mat-list-icon>domain</mat-icon>
-        <h4 mat-line [class.m-fadeOut]="isExpanded" [class.m-fadeIn]="!isExpanded">Management C</h4>
-      </mat-list-item>
-      <mat-list-item>
-        <mat-icon mat-list-icon>folder_shared</mat-icon>
-        <h4 mat-line [class.m-fadeOut]="isExpanded" [class.m-fadeIn]="!isExpanded">Management X</h4>
-      </mat-list-item>
-    </mat-nav-list>
-  </mat-drawer>
-
-  <div class="example-sidenav-content">
-    Conteudo
-  </div>
-</mat-drawer-container>

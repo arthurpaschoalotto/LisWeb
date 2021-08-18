@@ -2,6 +2,8 @@ import { TipoinstrumentoComponent } from './tipoinstrumento/tipoinstrumento.comp
 import { ListainterfaceamentosComponent } from './cadastrointerfaceamento/listainterfaceamentos/listainterfaceamentos.component';
 import { InterfaceamentoComponent } from './cadastrointerfaceamento/interfaceamento/interfaceamento.component';
 import { MenuComponent } from './menu/menu.component';
+import { AbalateralComponent } from './menu/abalateral/abalateral.component';
+import { CabecalhoComponent } from './menu/cabecalho/cabecalho.component';
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -36,6 +38,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
+    AbalateralComponent,
+    CabecalhoComponent,
     AppComponent,
     InterfaceamentoComponent,
     ListainterfaceamentosComponent,
