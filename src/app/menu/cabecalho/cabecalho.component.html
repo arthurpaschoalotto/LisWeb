@@ -2,50 +2,25 @@
   <mat-toolbar color="primary">
     <img src="/assets/LabMasterCloud2 .png" alt="..." height="80">
 
+    <div class="spacer"></div>
 
-    <nav class="navbar navbar-expand-lg navbar-white ms-5">
+    <a mat-button class="text-white">Central de compras</a>
 
-      <div class="container-fluid">
+    <a mat-button class="text-white">Documentos</a>
 
-        <a class="navbar-brand text-white" href="#">Inicio</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <a mat-button class="text-white">Novidades</a>
 
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active text-white" aria-current="page" href="#">Manuais</a>
-            </li>
+    <button mat-button [matMenuTriggerFor]="menu">Ajuda</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Liberar exames</button>
+        <button mat-menu-item>Suporte</button>
+      </mat-menu>
 
-            <li class="nav-item ms-3">
-              <a class="nav-link text-white" href="#">Central de Compras</a>
-            </li>
-
-            <li class="nav-item ms-3">
-              <a class="nav-link text-white" href="#">Pricing</a>
-            </li>
-
-            <li class="nav-item ms-3">
-              <a class="nav-link text-white" href="#">Configurações</a>
-            </li>
-
-            <li class="nav-item dropdown ms-3">
-              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink"
-                 role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Ajuda
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Liberar exames</a></li>
-                <li><a class="dropdown-item" href="#">Suporte</a></li>
-              </ul>
-
-            </li>
-          </ul>
-
-        </div>
-      </div>
-    </nav>
-
-  </mat-toolbar>
+      <button mat-raised-button [matMenuTriggerFor]="usuariolg">
+        <span class="material-icons me-2">account_circle</span>Usuario</button>
+        <mat-menu #usuariolg="matMenu">
+          <button mat-menu-item>Alterar senha</button>
+          <button mat-menu-item>Sair</button>
+        </mat-menu>
+      </mat-toolbar>
 </p>
