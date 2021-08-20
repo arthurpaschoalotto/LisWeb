@@ -34,7 +34,7 @@ import { FormsModule } from '@angular/forms';
 import { cadastrointerfaceamento } from './cadastrointerfaceamento/cadastrointerfaceamento.component';
 import {MatTreeModule} from '@angular/material/tree';
 import {MatSidenavModule} from '@angular/material/sidenav';
-
+import { TreeControl } from '@angular/cdk/tree';
 
 @NgModule({
   declarations: [

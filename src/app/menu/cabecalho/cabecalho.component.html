@@ -1,26 +1,27 @@
-<p>
+<nav class="fixed-top">
   <mat-toolbar color="primary">
     <img src="/assets/LabMasterCloud2 .png" alt="..." height="80">
 
-    <div class="spacer"></div>
+      <div class="nav navbar-nav collapse navbar-collapse"></div>
 
-    <a mat-button class="text-white">Central de compras</a>
+      <a mat-button class="text-white">Central de compras</a>
 
-    <a mat-button class="text-white">Documentos</a>
+      <a mat-button class="text-white">Documentos</a>
 
-    <a mat-button class="text-white">Novidades</a>
+      <a mat-button class="text-white">Novidades</a>
 
-    <button mat-button [matMenuTriggerFor]="menu">Ajuda</button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item>Liberar exames</button>
-        <button mat-menu-item>Suporte</button>
-      </mat-menu>
-
-      <button mat-raised-button [matMenuTriggerFor]="usuariolg">
-        <span class="material-icons me-2">account_circle</span>Usuario</button>
-        <mat-menu #usuariolg="matMenu">
-          <button mat-menu-item>Alterar senha</button>
-          <button mat-menu-item>Sair</button>
+      <button mat-button [matMenuTriggerFor]="menu">Ajuda</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Liberar exames</button>
+          <button mat-menu-item>Suporte</button>
         </mat-menu>
-      </mat-toolbar>
-</p>
+
+        <button mat-raised-button [matMenuTriggerFor]="usuariolg">
+          <span class="material-icons me-2">account_circle</span>Usuario</button>
+          <mat-menu #usuariolg="matMenu">
+            <button mat-menu-item>Alterar senha</button>
+            <button mat-menu-item>Sair</button>
+          </mat-menu>
+
+  </mat-toolbar>
+</nav>
