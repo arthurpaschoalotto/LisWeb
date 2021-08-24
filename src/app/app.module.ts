@@ -35,6 +35,7 @@ import { cadastrointerfaceamento } from './cadastrointerfaceamento/cadastrointer
 import {MatTreeModule} from '@angular/material/tree';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { TreeControl } from '@angular/cdk/tree';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { TreeControl } from '@angular/cdk/tree';
     MenuComponent
   ],
   imports: [
+    FlexLayoutModule,
     BrowserAnimationsModule,
     MatSidenavModule,
     MatTreeModule,

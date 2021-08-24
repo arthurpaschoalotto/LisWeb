@@ -1,27 +1,35 @@
-<nav class="fixed-top">
-  <mat-toolbar color="primary">
-    <img src="/assets/LabMasterCloud2 .png" alt="..." height="80">
 
-      <div class="nav navbar-nav collapse navbar-collapse"></div>
+<mat-toolbar fxLayout="row" color="primary" class="fixed-top">
 
-      <a mat-button class="text-white">Central de compras</a>
+  <img src="/assets/LabMasterCloud2 .png" alt="..." height="80" class="me-5 pe-5">
 
-      <a mat-button class="text-white">Documentos</a>
-
-      <a mat-button class="text-white">Novidades</a>
-
-      <button mat-button [matMenuTriggerFor]="menu">Ajuda</button>
-        <mat-menu #menu="matMenu">
-          <button mat-menu-item>Liberar exames</button>
-          <button mat-menu-item>Suporte</button>
-        </mat-menu>
-
-        <button mat-raised-button [matMenuTriggerFor]="usuariolg">
-          <span class="material-icons me-2">account_circle</span>Usuario</button>
-          <mat-menu #usuariolg="matMenu">
-            <button mat-menu-item>Alterar senha</button>
-            <button mat-menu-item>Sair</button>
+  <div class="ms-5 ps-5">
+    <div class="ms-5 ps-5">
+      <button mat-button *ngFor="let item of menuItems"
+          [fxShow]="item.showOnDesktop"
+          [fxShow.xs]="item.showOnMobile"
+          [fxShow.sm]="item.showOnTablet" class="ps-4 pe-4">
+          <mat-icon class="mr">{{item.icon}}</mat-icon>
+          {{item.label}}
+      </button>
+      <ng-container>
+          <button mat-icon-button [matMenuTriggerFor]="dropMenu">
+              <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #dropMenu="matMenu">
+              <ng-container *ngFor="let item of menuItems">
+                  <div [fxShow]="!item.showOnDesktop"
+                      [fxShow.sm]="!item.showOnTablet"
+                      [fxShow.xs]="!item.showOnMobile">
+                      <button mat-menu-item>
+                          <mat-icon class="mr">{{item.icon}}</mat-icon>
+                          {{item.label}}
+                      </button>
+                      <mat-divider></mat-divider>
+                  </div>
+              </ng-container>
           </mat-menu>
-
-  </mat-toolbar>
-</nav>
+      </ng-container>
+    </div>
+  </div>
+</mat-toolbar>
