@@ -36,6 +36,15 @@ import {MatTreeModule} from '@angular/material/tree';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { TreeControl } from '@angular/cdk/tree';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { Routes, RouterModule } from '@angular/router';
+import { routing } from './app-routing.module';
+import { SidebaradmComponent } from './sidebaradm/sidebaradm.component';
+
+const appRoutes: Routes=[
+  {path:'', component:MenuComponent},
+  {path:'cadastrointerf', component:cadastrointerfaceamento},
+
+];
 
 @NgModule({
   declarations: [
@@ -46,7 +55,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     ListainterfaceamentosComponent,
     cadastrointerfaceamento,
     TipoinstrumentoComponent,
-    MenuComponent
+    MenuComponent,
+    SidebaradmComponent
   ],
   imports: [
     FlexLayoutModule,
@@ -73,7 +83,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatSlideToggleModule,
     MatGridListModule,
     MatRadioModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    RouterModule.forRoot(appRoutes),
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
