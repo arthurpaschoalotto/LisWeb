@@ -1,7 +1,7 @@
-<form class= "example-container p-2 row container-fluid col-sm-12" fxHide fxShow.gt-xs>
+<form class= "example-container p-2 row container-fluid" fxShow.gt-xs>
       <div class="row mt-5">
 
-      <div class="row col-sm-4">
+      <div class="row col-xs-12 col-sm-12 col-md-4">
         <mat-form-field appearance="fill">
           <mat-label>Tipo de instrumento:</mat-label>
           <mat-select>
@@ -12,14 +12,14 @@
         </mat-form-field>
       </div>
 
-      <div class="row col-sm-5">
+      <div class="row col-md-5">
         <mat-form-field hintLabel="Max 25 caracteres" appearance="fill">
           <mat-label>Descrição:</mat-label>
           <input matInput #input maxlength="25" placeholder="Ex. BS-200, Architect">
         </mat-form-field>
       </div>
 
-      <div class="row col-sm-3">
+      <div class="row col-md-3">
       <mat-form-field appearance="fill">
         <mat-label>Trace:</mat-label>
         <input matInput type="number" min="0">
@@ -30,7 +30,7 @@
 
     <div class="row mt-4">
 
-      <div class="row col-sm-3">
+      <div class="row col-md-3">
         <mat-form-field appearance="fill">
         <mat-label >Velocidade da comunicação:</mat-label>
         <mat-select>
@@ -41,24 +41,24 @@
         </mat-form-field>
       </div>
 
-      <div class="col-sm-3 row">
+      <div class= "col-md-3 row">
         <mat-form-field appearance="fill">
           <mat-label>Data Bits:</mat-label>
           <input matInput type="number" min="0">
         </mat-form-field>
       </div>
 
-      <div class="col-sm-3 row">
+      <div class= "col-md-3 row">
         <mat-form-field appearance="fill">
           <mat-label>Stop Bits:</mat-label>
           <input matInput type="number" min="0">
         </mat-form-field>
       </div>
 
-      <div class="row col-sm-3 me-2">
+      <div class="row col-md-3 me-2">
         <label class="fs-6 text">Qual a comunicação do instrumento?</label>
           <div class="mt-2">
-            <mat-radio-group aria-label="Select an option">
+            <mat-radio-group aria-label="Select an option" color="primary">
               <mat-radio-button value="1" class="me-4">Serial</mat-radio-button>
               <mat-radio-button value="2" class="me-4">TCP/IP</mat-radio-button>
               <mat-radio-button value="3" class="me-4">Arquivo</mat-radio-button>
@@ -70,16 +70,16 @@
 
     <div class="row mt-4">
 
-      <div class="row col-sm-4">
-        <mat-slide-toggle>Controle de fluxo</mat-slide-toggle>
+      <div class="row col-md-4">
+        <mat-slide-toggle color="primary">Controle de fluxo</mat-slide-toggle>
       </div>
 
-      <div class="row col-sm-4">
-        <mat-slide-toggle>Paridade</mat-slide-toggle>
+      <div class="row col-md-4">
+        <mat-slide-toggle color="primary">Paridade</mat-slide-toggle>
       </div>
 
-      <div class="row col-sm-4">
-        <mat-slide-toggle>Iniciar Automaticamente</mat-slide-toggle>
+      <div class="row col-md-4">
+        <mat-slide-toggle color="primary">Iniciar Automaticamente</mat-slide-toggle>
       </div>
 
     </div>

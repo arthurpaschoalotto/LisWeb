@@ -1,5 +1,5 @@
 <div class="row mat-elevation-z8 col-sm-12">
-  <table mat-table [dataSource]="dataSource">
+  <table mat-table [dataSource]="dataSource" color="primary">
 
   <div class="row col-sm-1">
     <ng-container matColumnDef="position">
@@ -20,7 +20,7 @@
       <th mat-header-cell *matHeaderCellDef> Ativar Exame </th>
 
       <td mat-cell *matCellDef="let element">
-        <mat-slide-toggle name="ativarexame">
+        <mat-slide-toggle name="ativarexame" color="primary">
         </mat-slide-toggle></td>
     </ng-container>
 

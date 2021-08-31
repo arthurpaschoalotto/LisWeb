@@ -9,7 +9,7 @@ import { cadastrointerfaceamento } from './cadastrointerfaceamento/cadastrointer
 import { ModuleWithProviders } from '@angular/core';
 
 const routes: Routes = [
-  {path: 'lista', component:ListainterfaceamentosComponent},
+  {path: 'tipo', component:TipoinstrumentoComponent},
   {path: 'cadastro', component:cadastrointerfaceamento}
 ];
 export const routing: ModuleWithProviders<any> = RouterModule.forRoot(routes);
