@@ -1,0 +1,87 @@
+<form class= "example-container row container-fluid" fxShow.gt-xs>
+
+<div class="row justify-content-around">
+
+  <div class="row col-md-6 p-2">
+    <mat-form-field appearance="fill">
+      <mat-label>Nome:</mat-label>
+      <input matInput #input maxlength="50" placeholder="Nome compelto">
+    </mat-form-field>
+  </div>
+
+  <div class="row col-md-3 p-2">
+    <mat-form-field appearance="fill" id="datanascimentopaciente">
+      <mat-label>Data de nascimento</mat-label>
+      <input matInput [matDatepicker]="picker" id="datanascimentopaciente" name="datanascimentopaciente"
+            [(ngModel)]="paciente.datanascimentopaciente" (ngModelChange)="calculaIdade()">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+
+  <div class="row col-md-3 p-2">
+    <mat-form-field appearance="fill">
+      <mat-label>Idade:</mat-label>
+      <input matInput disabled #input name="idadepaciente" [(ngModel)]="paciente.idadepaciente">
+    </mat-form-field>
+  </div>
+
+</div>
+
+<div class="row justify-content-around">
+
+  <div class="row col-md-3 p-2">
+    <mat-form-field appearance="fill">
+      <mat-label>RG:</mat-label>
+      <input matInput #input maxlength="12" mask="00.000.000-0">
+    </mat-form-field>
+  </div>
+
+  <div class="row col-md-3 p-2">
+    <mat-form-field appearance="fill">
+      <mat-label>CPF:</mat-label>
+      <input matInput #input maxlength="14" mask="000.000.000-00">
+    </mat-form-field>
+  </div>
+
+  <div class= "col-md-3 row p-2">
+    <mat-form-field appearance="fill">
+      <mat-label>Sexo</mat-label>
+      <mat-select>
+        <mat-option value="masc">Masculino</mat-option>
+        <mat-option value="fem">Feminino</mat-option>
+        <mat-option value="sexoutros">Outros</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class= "col-md-3 row p-2">
+    <mat-form-field appearance="fill">
+      <mat-label>Cor</mat-label>
+      <mat-select>
+        <mat-option value="amarelo">Amarelo</mat-option>
+        <mat-option value="branco">Branco</mat-option>
+        <mat-option value="preto">Preto</mat-option>
+        <mat-option value="coroutros">Outros</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  </div>
+
+  <div class="row justify-content-around">
+    <div class="row col-md-6 p-2">
+      <mat-form-field appearance="fill">
+        <mat-label>Mãe:</mat-label>
+        <input matInput #input maxlength="50" placeholder="Nome mãe compelto">
+      </mat-form-field>
+    </div>
+
+    <div class="row col-md-6 p-2">
+      <mat-form-field appearance="fill">
+        <mat-label>Pai:</mat-label>
+        <input matInput #input maxlength="50" placeholder="Nome pai compelto">
+      </mat-form-field>
+    </div>
+  </div>
+
+</form>

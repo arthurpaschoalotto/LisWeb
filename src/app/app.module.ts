@@ -39,6 +39,21 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { Routes, RouterModule } from '@angular/router';
 import { routing } from './app-routing.module';
 import { SidebaradmComponent } from './sidebaradm/sidebaradm.component';
+import { CadastropacienteComponent } from './cadastropaciente/cadastropaciente.component';
+import { Cadastropaciente1Component } from './cadastropaciente/cadastropaciente1/cadastropaciente1.component';
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
+import { LOCALE_ID } from '@angular/core';
+import { NgxMaskModule, IConfig } from 'ngx-mask';
+import { Cadastropaciente2Component } from './cadastropaciente/cadastropaciente2/cadastropaciente2.component';
+import { EnderecopacienteComponent } from './cadastropaciente/cadastropaciente2/enderecopaciente/enderecopaciente.component'
+import { HttpClientModule } from '@angular/common/http';
+import { MY_DATE_FORMATS } from './formdata';
+import { MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
+import { MatMomentDateModule } from "@angular/material-moment-adapter";
+import { MAT_MOMENT_DATE_ADAPTER_OPTIONS } from '@angular/material-moment-adapter';
+
+registerLocaleData(localePt, 'pt')
 
 const appRoutes: Routes=[
   {path:'', component:MenuComponent},
@@ -56,9 +71,16 @@ const appRoutes: Routes=[
     cadastrointerfaceamento,
     TipoinstrumentoComponent,
     MenuComponent,
-    SidebaradmComponent
+    SidebaradmComponent,
+    CadastropacienteComponent,
+    Cadastropaciente1Component,
+    Cadastropaciente2Component,
+    EnderecopacienteComponent
   ],
   imports: [
+    MatMomentDateModule,
+    HttpClientModule,
+    NgxMaskModule.forRoot(),
     FlexLayoutModule,
     BrowserAnimationsModule,
     MatSidenavModule,
@@ -87,7 +109,13 @@ const appRoutes: Routes=[
     RouterModule.forRoot(appRoutes),
     routing
   ],
-  providers: [],
+  providers: [
+    { provide: MAT_MOMENT_DATE_ADAPTER_OPTIONS, useValue: {useUtc: true}},
+    { provide: MAT_MOMENT_DATE_ADAPTER_OPTIONS, useValue: {strict: true}},
+    { provide: LOCALE_ID , useValue: 'pt'},
+    { provide: MAT_DATE_LOCALE, useValue: 'pt-BR' },
+    { provide: MAT_DATE_FORMATS , useValue: MY_DATE_FORMATS }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
