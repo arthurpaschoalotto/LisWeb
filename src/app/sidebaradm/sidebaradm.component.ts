@@ -21,7 +21,7 @@ import { Component, OnInit } from '@angular/core';
 export class NavItem{
   title: string = "";
   icon?: string = "";
-  href?: string = "";
+  routerlink?: string = "";
   subitens?: NavItem[] = [];
 
 }
@@ -35,12 +35,12 @@ export class NavItem{
 export class SidebaradmComponent implements OnInit {
 
   menu: NavItem[] = [
-                      {title:'Recepção', icon:'/assets/recepcao.png',href:'##', subitens:[
-                        {title:'Nova Requisição',href:'#'},
+                      {title:'Recepção', icon:'/assets/recepcao.png',routerlink:'##', subitens:[
+                        {title:'Nova Requisição',routerlink:'#'},
                         {title:'Requisições'},
-                        {title:'Pacientes'}
+                        {title:'Pacientes',routerlink:'pacientes'}
                       ]},
-                      {title:'Coleta', icon:'/assets/coleta.png',href:'###', subitens:[
+                      {title:'Coleta', icon:'/assets/coleta.png',routerlink:'###', subitens:[
                         {title:'Registro de Coleta'},
                         {title:'Lista de Espera'},
                         {title:'Coletores'}

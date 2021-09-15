@@ -52,6 +52,10 @@ import { MY_DATE_FORMATS } from './formdata';
 import { MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
 import { MatMomentDateModule } from "@angular/material-moment-adapter";
 import { MAT_MOMENT_DATE_ADAPTER_OPTIONS } from '@angular/material-moment-adapter';
+import {MatTabsModule} from '@angular/material/tabs';
+import { PlanosaudepacienteComponent } from './cadastropaciente/cadastropaciente2/planosaudepaciente/planosaudepaciente.component';
+import { InfadcpacienteComponent } from './cadastropaciente/cadastropaciente2/infadcpaciente/infadcpaciente.component';
+import { PacientesComponent } from './pacientes/pacientes.component';
 
 registerLocaleData(localePt, 'pt')
 
@@ -75,9 +79,13 @@ const appRoutes: Routes=[
     CadastropacienteComponent,
     Cadastropaciente1Component,
     Cadastropaciente2Component,
-    EnderecopacienteComponent
+    EnderecopacienteComponent,
+    PlanosaudepacienteComponent,
+    InfadcpacienteComponent,
+    PacientesComponent
   ],
   imports: [
+    MatTabsModule,
     MatMomentDateModule,
     HttpClientModule,
     NgxMaskModule.forRoot(),

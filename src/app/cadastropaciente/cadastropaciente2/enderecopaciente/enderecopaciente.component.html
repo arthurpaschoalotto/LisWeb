@@ -1,55 +1,70 @@
-<form class="row m-1 mt-3 p-2">
+<form class="example-container row container-fluid mt-4">
 
-  <div class="mb-3 input-group w-50">
-    <label for="ceppaciente" class="form-label me-2">CEP:</label>
-         <input id="ceppaciente " type="text" class="form-control" mask="00000-000"
-         placeholder="Informe o CEP" aria-label="Recipient's username" aria-describedby="basic-addon2"
-         [(ngModel)]="cep.cep" name="ceppaciente">
+  <div class="row justify-content-around">
 
-         <div class="input-group-append">
-          <button class="btn btn-danger" type="button" (click)="consulta()">Consultar</button>
-        </div>
-
-      </div>
-
-    <div class="row col-10 me-3">
-      <label for="eenderecoLogradouroPaciente" class="form-label">Logradouro:</label>
-      <input type="text" id="enderecoLogradouroPaciente" class="form-control ms-2"
-      [(ngModel)]="cep.logradouro" name="logradouro">
+    <div class="row col-md-3 p-2">
+      <mat-form-field appearance="fill">
+        <mat-label for="cep">CEP:</mat-label>
+        <input matInput #input maxlength="9" mask="00000-000" id="cep" name="cep"
+               [(ngModel)]="cep.cep" [(ngModel)]="paciente.cep"
+               (ngModelChange)="consulta()">
+      </mat-form-field>
     </div>
 
-    <div class="row col-2">
-      <label for="enderecoNumPaciente" class="form-label">N°:</label>
-      <input type="text" id="enderecoNumPaciente" class="form-control ms-2">
+    <div class="row col-md-4 p-2">
+      <mat-form-field appearance="fill">
+        <mat-label>Cidade:</mat-label>
+        <input matInput #input maxlength="50" id="enderecoCidade" name="localidade"
+               [(ngModel)]="cep.localidade" [(ngModel)]="paciente.cep">
+      </mat-form-field>
     </div>
 
-      <div class="row col-6 me-3 mt-3">
-        <label for="enderecoCompPaciente" class="form-label">Complemento:</label>
-        <input type="text" id="enderecoCompPaciente" class="form-control ms-2"
-        [(ngModel)]="cep.complemento" name="complemento">
-      </div>
+    <div class="row col-md-2 p-2">
+      <mat-form-field appearance="fill">
+        <mat-label>UF:</mat-label>
+        <input matInput #input maxlength="50" id="enderecoUf" name="uf"
+               [(ngModel)]="cep.uf" [(ngModel)]="paciente.uf">
+      </mat-form-field>
+    </div>
 
-      <div class="row col-6 mt-3">
-        <label for="enderecoBairroPaciente" class="form-label">Bairro:</label>
-        <input type="text" id="enderecoBairroPaciente" class="form-control ms-2"
-        [(ngModel)]="cep.bairro" name="bairro">
-      </div>
+    <div class="row col-md-3 p-2">
+      <mat-form-field appearance="fill">
+        <mat-label>Cod. IBGE:</mat-label>
+        <input matInput #input maxlength="50" id="enderecoIbge" name="ibge"
+               [(ngModel)]="cep.ibge" [(ngModel)]="paciente.ibge">
+      </mat-form-field>
+    </div>
 
-      <div class="row col-6 me-3 mt-3">
-        <label for="enderecoCidadePaciente" class="form-label">Cidade:</label>
-        <input type="text" id="enderecoCidadePaciente" class="form-control ms-2"
-        [(ngModel)]="cep.localidade" name="localidade">
-      </div>
+    <div class="row col-md-3 p-2">
+      <mat-form-field appearance="fill">
+        <mat-label>Logradouro:</mat-label>
+        <input matInput #input maxlength="50" id="enderecoLogradouro" name="logradouro"
+              [(ngModel)]="cep.logradouro" [(ngModel)]="paciente.logradouro">
+      </mat-form-field>
+    </div>
 
-      <div class="row col-1 me-3 mt-3">
-        <label for="enderecoUfPaciente" class="form-label">UF:</label>
-        <input type="text" id="enderecoUfPaciente" class="form-control ms-2"
-        [(ngModel)]="cep.uf" name="uf">
-      </div>
+    <div class="row col-md-3 p-2">
+      <mat-form-field appearance="fill">
+        <mat-label>N°:</mat-label>
+        <input matInput #input maxlength="50" id="enderecoNum" name="numero" [(ngModel)]="paciente.numero">
+      </mat-form-field>
+    </div>
 
-      <div class="row col-5 mt-3">
-        <label for="enderecoIbgePaciente" class="form-label">Código IBGE:</label>
-        <input type="text" id="enderecoIbgePaciente" class="form-control ms-2"
-        [(ngModel)]="cep.ibge" name="uf">
-      </div>
+    <div class="row col-md-3 p-2">
+      <mat-form-field appearance="fill">
+        <mat-label>Complemento:</mat-label>
+        <input matInput #input maxlength="50" id="enderecoComp" name="complemento"
+               [(ngModel)]="cep.complemento" [(ngModel)]="paciente.complemento">
+      </mat-form-field>
+    </div>
+
+    <div class="row col-md-3 p-2">
+      <mat-form-field appearance="fill">
+        <mat-label>Bairro:</mat-label>
+        <input matInput #input maxlength="50" id="enderecoBairro" name="bairro"
+               [(ngModel)]="cep.bairro" [(ngModel)]="paciente.bairro">
+      </mat-form-field>
+    </div>
+
+  </div>
 </form>

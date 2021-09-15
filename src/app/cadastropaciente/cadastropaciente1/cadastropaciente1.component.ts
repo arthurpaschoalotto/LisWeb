@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { EventEmitter } from "@angular/core";
 import { NgForm } from '@angular/forms';
 import * as moment from 'moment';
@@ -7,12 +7,10 @@ import { NgxMaskModule, IConfig } from 'ngx-mask'
 import {FormControl} from '@angular/forms';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
+import { Paciente } from '../../componentes/model/paciente.model';
+import { PacienteService } from 'src/app/componentes/service/paciente.service';
+import { Router } from '@angular/router';
 
-
-export class Paciente{
-  datanascimentopaciente: Date | null = null;
-  idadepaciente: String | null = null;
-}
 
 @Component({
   selector: 'app-cadastropaciente1',
@@ -20,23 +18,39 @@ export class Paciente{
   styleUrls: ['./cadastropaciente1.component.scss']
 })
 export class Cadastropaciente1Component implements OnInit {
+  @Input('paciente') paciente: Paciente;
 
-  paciente: Paciente = new Paciente();
-
-  constructor() { }
+  constructor(
+    private router: Router,
+    private pacienteService: PacienteService,
+  ) {
+    this.paciente = new Paciente({});
+  }
 
   ngOnInit(): void {
 
   }
   public calculaIdade(): void{
-    console.log(this.paciente.idadepaciente);
-    const tempo = moment(this.paciente.datanascimentopaciente);
+    console.table(this.paciente);
+    const tempo = moment(this.paciente.data_nascimento);
     const anos = moment().diff(tempo, 'years');
     tempo.add(anos,"years");
     const meses = moment().diff(tempo, 'month');
     tempo.add(meses,"month");
     const dias = moment().diff(tempo, 'days');
-    this.paciente.idadepaciente = anos + ' anos, ' + meses + ' meses, ' + dias + ' dias.';
-    console.log(this.paciente.idadepaciente);
+    this.paciente.idade_paciente = anos + ' anos, ' + meses + ' meses, ' + dias + ' dias.';
+    console.log(this.paciente.idade_paciente);
+  }
+
+  createPaciente(): void {
+    console.table(this.paciente)
+    this.pacienteService.create(this.paciente).subscribe(() => {
+      this.pacienteService.showMessage('Paciente criado com sucesso!');
+     this.router.navigate(['/pacientes']);
+    });
+  }
+
+  cancel(): void {
+   this.router.navigate(['/pacientes']);
   }
 }
