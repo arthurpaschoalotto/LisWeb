@@ -1,3 +1,4 @@
+import {MatSortModule} from '@angular/material/sort';
 import { TipoinstrumentoComponent } from './tipoinstrumento/tipoinstrumento.component';
 import { ListainterfaceamentosComponent } from './cadastrointerfaceamento/listainterfaceamentos/listainterfaceamentos.component';
 import { InterfaceamentoComponent } from './cadastrointerfaceamento/interfaceamento/interfaceamento.component';
@@ -57,6 +58,7 @@ import { PlanosaudepacienteComponent } from './cadastropaciente/cadastropaciente
 import { InfadcpacienteComponent } from './cadastropaciente/cadastropaciente2/infadcpaciente/infadcpaciente.component';
 import { PacientesComponent } from './pacientes/pacientes.component';
 
+
 registerLocaleData(localePt, 'pt')
 
 const appRoutes: Routes=[
@@ -85,6 +87,7 @@ const appRoutes: Routes=[
     PacientesComponent
   ],
   imports: [
+    MatSortModule,
     MatTabsModule,
     MatMomentDateModule,
     HttpClientModule,

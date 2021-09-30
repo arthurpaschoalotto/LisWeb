@@ -31,15 +31,9 @@ export class Cadastropaciente1Component implements OnInit {
 
   }
   public calculaIdade(): void{
-    console.table(this.paciente);
     const tempo = moment(this.paciente.data_nascimento);
-    const anos = moment().diff(tempo, 'years');
-    tempo.add(anos,"years");
-    const meses = moment().diff(tempo, 'month');
-    tempo.add(meses,"month");
-    const dias = moment().diff(tempo, 'days');
-    this.paciente.idade_paciente = anos + ' anos, ' + meses + ' meses, ' + dias + ' dias.';
-    console.log(this.paciente.idade_paciente);
+    const diff = moment.duration(moment().diff(tempo))
+    this.paciente.idade_paciente = diff.years() + ' anos, ' + diff.months() + ' meses, ' + diff.days() + ' dias.';
   }
 
   createPaciente(): void {

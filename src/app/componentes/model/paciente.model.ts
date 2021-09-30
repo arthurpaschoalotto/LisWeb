@@ -29,6 +29,9 @@ export class Paciente {
   public receber_email?: boolean;
   public receber_sms?: boolean;
   public observacao?: string;
+  public telefone?: string;
+  public email?: string;
+  public celular?: string;
 
   constructor(values: Paciente) {
     Object.assign(this, values);

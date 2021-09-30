@@ -1,3 +1,4 @@
+import { Sort } from '@angular/material/sort';
 import { Query } from './../model/query.model';
 import { Paciente } from '../model/paciente.model';
 import { Injectable } from '@angular/core';
@@ -26,8 +27,17 @@ export class PacienteService {
     return this.http.post<Paciente>(this.baseUrl, paciente);
   }
 
-  read(): Observable<Paciente[]> {
-    return this.http.get<Paciente[]>(this.baseUrl);
+  read(queries: Query[],page: number =1, sortActive: string ="id", sortDirection: string = "desc"): Observable<Paciente[]> {
+    let params = new HttpParams();
+
+    queries.forEach(busca =>{
+      params = params.append(busca.key,busca.value);
+    })
+    params = params.append('page', page);
+    params = params.append('sort_active', sortActive);
+    params = params.append('sort_direction', sortDirection);
+
+    return this.http.get<Paciente[]>(this.baseUrl, {params});
   }
 
   readById(id: number): Observable<Paciente> {

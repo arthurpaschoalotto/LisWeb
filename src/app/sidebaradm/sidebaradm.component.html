@@ -3,13 +3,13 @@
   <div class="simple-admin">
   <div data-component="sidebar">
     <div class="sidebar">
-      <ul class="list-group flex-column d-inline-block first-menu mgt-6 ">
+      <ul class="list-group flex-column d-inline-block first-menu mgt-6 mr-auto">
         <li class="list-group-item py-2" *ngFor="let navItem of menu">
           <a href="#" class="text-black fs-6 text-decoration-none d-inline-flex">
             <img [src]="navItem.icon" height="40" class="mr-4">
             <div class="ms-4 mt-2">{{navItem.title}}</div>
           </a>
-          <ul class="list-group flex-column d-inline-block submenu svg-submenu mgt-6">
+          <ul class="list-group flex-column d-inline-block submenu svg-submenu mgt-6 mr-auto">
             <li class="list-group-item" *ngFor="let subItem of navItem.subitens">
               <a [href]="subItem.routerlink">
                 <div class="text d-inline-block align-middle">

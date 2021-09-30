@@ -12,10 +12,8 @@
   <div class="row col-md-3 p-2">
     <mat-form-field appearance="fill" id="datanascimentopaciente">
       <mat-label>Data de nascimento</mat-label>
-      <input matInput [matDatepicker]="picker" id="datanascimentopaciente" name="data_nascimento"
-            (ngModelChange)="calculaIdade()" [(ngModel)]="paciente.data_nascimento">
-      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-      <mat-datepicker #picker></mat-datepicker>
+      <input matInput type="date" id="datanascimentopaciente" name="data_nascimento"
+            (input)="calculaIdade()" [(ngModel)]="paciente.data_nascimento">
     </mat-form-field>
   </div>
 
