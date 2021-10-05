@@ -18,12 +18,12 @@ import { Component, OnInit } from '@angular/core';
 //   },
 // ];
 
+// TODO: #2 Mover para arquivo separado, do tipo model
 export class NavItem{
   title: string = "";
   icon?: string = "";
   routerlink?: string = "";
   subitens?: NavItem[] = [];
-
 }
 
 @Component({
@@ -34,6 +34,7 @@ export class NavItem{
 
 export class SidebaradmComponent implements OnInit {
 
+  // TODO: #3 Replicar estrutura do menu para o backend Rails
   menu: NavItem[] = [
                       {title:'Recepção', icon:'/assets/recepcao.png',routerlink:'##', subitens:[
                         {title:'Nova Requisição',routerlink:'#'},
@@ -52,6 +53,7 @@ export class SidebaradmComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    // TODO: #4 Nao deixar depuracoes no codigo final
     console.table(this.menu);
   }
 

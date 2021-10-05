@@ -10,7 +10,6 @@ import {MatTreeFlatDataSource, MatTreeFlattener} from '@angular/material/tree';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  // TODO: #8 Carece de atualizacao?
   title = 'germes';
-
-
 }

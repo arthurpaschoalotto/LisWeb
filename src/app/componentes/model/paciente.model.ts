@@ -37,3 +37,4 @@ export class Paciente {
     Object.assign(this, values);
   }
 }
+// TODO: #13 Remover o ? dos atributos nao opcionais

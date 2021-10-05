@@ -8,7 +8,7 @@ import { PacienteService } from 'src/app/componentes/service/paciente.service';
   selector: 'app-infadcpaciente',
   templateUrl: './infadcpaciente.component.html',
   styleUrls: ['./infadcpaciente.component.scss']
-})
+}) // TODO: #17 Nome do componente esta correto? Camelizado? "Infadc"?
 export class InfadcpacienteComponent implements OnInit {
   @Input('paciente') paciente: Paciente;
 

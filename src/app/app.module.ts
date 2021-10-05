@@ -78,6 +78,7 @@ const appRoutes: Routes=[
     TipoinstrumentoComponent,
     MenuComponent,
     SidebaradmComponent,
+    // TODO: #6 Criar sub-modulos para cadastros
     CadastropacienteComponent,
     Cadastropaciente1Component,
     Cadastropaciente2Component,
@@ -100,6 +101,7 @@ const appRoutes: Routes=[
     FormsModule,
     BrowserModule,
     AppRoutingModule,
+    // TODO: #7 Criar sub-modulo para o Material, agrupando
     MatMenuModule,
     MatCardModule,
     MatIconModule,

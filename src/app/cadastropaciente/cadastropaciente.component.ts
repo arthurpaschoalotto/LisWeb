@@ -22,6 +22,8 @@ export class CadastropacienteComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  // TODO: #14 Despersonificar nome das funcoes, deixar generico o nome
   createPaciente(): void {
     console.table(this.paciente)
     this.pacienteService.create(this.paciente).subscribe(() => {
