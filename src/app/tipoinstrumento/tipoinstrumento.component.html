@@ -1,0 +1,26 @@
+<form class="example-container p-2 row mt-5">
+<div class="row mt-2">
+  <div class="rox col-2">
+    <mat-form-field hintLabel="Max 10 caracteres" appearance="fill">
+      <mat-label>Codigo</mat-label>
+      <!-- TODO: #9 Nao repetir ids num arquivo, #input -->
+      <input matInput #input maxlength="10" placeholder="Crie um codigo">
+    </mat-form-field>
+  </div>
+  <div class="row col-3">
+    <mat-form-field appearance="fill">
+      <mat-label>Descrição</mat-label>
+      <input matInput #input maxlength="25" placeholder="Informe o nome do exame">
+    </mat-form-field>
+  </div>
+  <div class="row col-3">
+    <mat-form-field appearance="fill">
+    <mat-label >Modalidade</mat-label>
+    <mat-select>
+      <mat-option value="option">Análise</mat-option>
+      <mat-option value="option">Tratamento</mat-option>
+    </mat-select>
+    </mat-form-field>
+  </div>
+</div>
+</form>

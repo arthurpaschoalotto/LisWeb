@@ -1,0 +1,123 @@
+<div class="mscustom row">
+
+  <div class="p-3 col-sm-12 row">
+    <div class="col-sm-1 m-1">
+      <button mat-mini-fab color="primary" aria-expanded="false" routerLink="/cadastropaciente">
+        <mat-icon>add</mat-icon>
+      </button>
+     <mat-label class="ms-1 fs-6"></mat-label>
+    </div>
+
+    <div class="col-sm-1 m-1">
+      <button mat-mini-fab color="primary" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        <mat-icon>search</mat-icon>
+      </button>
+    </div>
+
+    <div class="col-sm-1 m-1">
+      <button mat-mini-fab color="primary">
+        <mat-icon>edit</mat-icon>
+      </button>
+    </div>
+
+    <div class="col-sm-1 m-1">
+      <button mat-mini-fab color="primary">
+        <mat-icon>settings_suggest</mat-icon>
+      </button>
+    </div>
+
+    <div class="col-sm-1 m-1">
+      <button mat-mini-fab color="primary">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+
+  </div>
+
+  <div class="collapse" id="collapseExample">
+    <div class="card card-body">
+
+      <div class="row">
+        <div class="mb-3 col-md-3 row">
+          <mat-form-field appearance="fill">
+            <mat-label>Nome:</mat-label>
+            <input matInput #nome maxlength="50" placeholder="Filtre por nome" (input)="addSearch('nome',nome.value)">
+          </mat-form-field>
+        </div>
+
+        <div class="mb-3 col-md-2 row">
+          <mat-form-field appearance="fill">
+            <mat-label>RG:</mat-label>
+            <input matInput #rg maxlength="12" placeholder="Filtre por RG" (input)="addSearch('rg',rg.value,true)" mask="00.000.000-0">
+          </mat-form-field>
+        </div>
+
+        <div class="mb-3 col-md-2 row">
+          <mat-form-field appearance="fill">
+            <mat-label>CPF:</mat-label>
+            <input matInput #cpf maxlength="14" placeholder="Filtre por CPF" (input)="addSearch('cpf',cpf.value,true)" mask="000.000.000-00">
+          </mat-form-field>
+        </div>
+
+        <div class="mb-3 col-md-3 row">
+          <mat-form-field appearance="fill">
+            <mat-label>Nome da Mãe:</mat-label>
+            <input matInput #nome_mae maxlength="14" placeholder="Filtre por Nome da Mãe" (input)="addSearch('nome_mae',nome_mae.value)">
+          </mat-form-field>
+        </div>
+
+
+        <div class="mb-3 col-md-3 row">
+          <mat-form-field appearance="fill">
+            <mat-label>Nome do Pai:</mat-label>
+            <input matInput #nome_pai maxlength="14" placeholder="Nome do Pai" (input)="addSearch('nome_pai',nome_pai.value)">
+          </mat-form-field>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort (matSortChange)="sortData()">
+
+    <ng-container matColumnDef="Nome">
+      <th mat-header-cell mat-sort-header="nome" *matHeaderCellDef> Nome </th>
+      <td mat-cell *matCellDef="let element"> {{element.nome | slice:0:12}} ...</td>
+    </ng-container>
+
+    <ng-container matColumnDef="RG">
+      <th mat-header-cell mat-sort-header="rg" *matHeaderCellDef> RG </th>
+      <td mat-cell *matCellDef="let element"> {{element.rg | slice:0:5}} ...</td>
+    </ng-container>
+
+    <ng-container matColumnDef="CPF">
+      <th mat-header-cell mat-sort-header="cpf" *matHeaderCellDef> CPF </th>
+      <td mat-cell *matCellDef="let element"> {{element.cpf | slice:0:5}} ...</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Email">
+      <th mat-header-cell mat-sort-header="email" *matHeaderCellDef> E-mail </th>
+      <td mat-cell *matCellDef="let element"> {{element.email | slice:0:9}} ...</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Telefone">
+      <th mat-header-cell mat-sort-header="telefone" *matHeaderCellDef> Telefone </th>
+      <td mat-cell *matCellDef="let element"> {{element.telefone | slice:0:7}} ...</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Celular">
+      <th mat-header-cell mat-sort-header="celular" *matHeaderCellDef> Celular </th>
+      <td mat-cell *matCellDef="let element"> {{element.celular | slice:0:7}} ...</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <div class="col-sm-1 mt-4">
+    <button mat-flat-button color="primary" (click)="this.nextPage()" [hidden]="this.noMorePages">
+      Mostrar mais registros...
+    </button>
+  </div>
+    <span [hidden]="!this.noMorePages">Sem mais registros, foram apresentados o total de {{this.dataSource.length}} registros!</span>
+</div>

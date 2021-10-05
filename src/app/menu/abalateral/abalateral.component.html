@@ -1,0 +1,63 @@
+<mat-drawer-container  class="example-container mat-typography h-100
+ mt-5 col-6 col-md-3 col-lg-2 navbarwd2 navbarwd col-xl-2" style="background-color:white" autosize>
+  <mat-drawer [@isExpanded]="isExpanded" #drawer mode="side" disableClose="true" opened="true" class="example-sidenav background">
+    <div>
+    <button  mat-mini-fab
+    (click)="isExpanded = !isExpanded" color="primary" style="margin: 18px;">
+      <mat-icon aria-label="Menu">menu</mat-icon>
+    </button>
+    </div>
+
+    <!-- TODO: #12 Trazer dados do menu estruturadamente, se possivel via backend -->
+    <mat-nav-list>
+      <div class="border m-0">
+        <mat-list-item class="" routerLink="cadastro">
+
+          <mat-icon mat-list-icon><img src="/assets/recepcao.png" alt="..." height="35"></mat-icon>
+
+          <h4 mat-line class="ms-2 mt-3">
+          Recepção
+          </h4>
+        </mat-list-item>
+      </div>
+      <div class="border">
+        <mat-list-item class="mt-1">
+
+          <mat-icon mat-list-icon><img src="/assets/coleta.png" alt="..." height="35"></mat-icon>
+
+          <h4 mat-line class="ms-2 mt-3">Coleta</h4>
+        </mat-list-item>
+      </div>
+      <div class="border">
+        <mat-list-item class="mt-1">
+
+          <mat-icon mat-list-icon><img src="/assets/triagem.png" alt="..." height="35"></mat-icon>
+
+          <h4 mat-line class="ms-2 mt-3">Triagem</h4>
+        </mat-list-item>
+      </div>
+      <div class="border">
+        <mat-list-item class="mt-1">
+
+          <mat-icon mat-list-icon><img src="/assets/resultado.png" alt="..." height="35" class="text-center"></mat-icon>
+
+          <h4 mat-line class="ms-2 mt-3">Resultados</h4>
+        </mat-list-item>
+      </div>
+      <div class="border">
+        <mat-list-item class="mt-1">
+
+          <mat-icon mat-list-icon><img src="/assets/aprovacao.png" alt="..." height="35"></mat-icon>
+
+          <h4 mat-line [@isExpanded]="isExpanded"  class="ms-2 mt-3">Aprovação</h4>
+        </mat-list-item>
+    </div>
+    </mat-nav-list>
+
+
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    .
+  </div>
+</mat-drawer-container>
