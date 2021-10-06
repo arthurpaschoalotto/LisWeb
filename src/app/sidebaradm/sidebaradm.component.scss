@@ -13,13 +13,13 @@ body {
 [data-component='sidebar'] {
   .sidebar {
     position: fixed;
-    z-index: 9999;
+    z-index: 1;
     font-family: 'Open Sans', sans-serif;
   }
   .first-menu {
     position: fixed;
     background-color: #fff;
-    height: 100vw;
+    height: 100%;
     width: 70px;
     top: 0px;
     overflow: hidden;

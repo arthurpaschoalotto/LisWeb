@@ -24,10 +24,11 @@ export class PlanosaudepacienteComponent implements OnInit {
   convenios: string[] = [
     "Santa Casa", "UNIMED", "Prever"
   ];
+  
   ngOnInit(): void {
   }
+
   createPaciente(): void {
-    console.table(this.paciente)
     this.pacienteService.create(this.paciente).subscribe(() => {
       this.pacienteService.showMessage('Paciente criado com sucesso!');
      this.router.navigate(['/pacientes']);

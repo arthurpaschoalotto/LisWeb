@@ -21,7 +21,7 @@ export class Cadastropaciente1Component implements OnInit {
   @Input('paciente') paciente: Paciente;
 
   constructor(
-    private router: Router,
+    private router: Router, //router
     private pacienteService: PacienteService,
   ) {
     this.paciente = new Paciente({});
@@ -31,20 +31,18 @@ export class Cadastropaciente1Component implements OnInit {
 
   }
   public calculaIdade(): void{
-    const tempo = moment(this.paciente.data_nascimento);
-    const diff = moment.duration(moment().diff(tempo))
-    this.paciente.idade_paciente = diff.years() + ' anos, ' + diff.months() + ' meses, ' + diff.days() + ' dias.';
+    const tempo = moment(this.paciente.data_nascimento); //converte data
+    const diff = moment.duration(moment().diff(tempo)) //calcula diferença da data nascimento para data atual
+    this.paciente.idade_paciente = diff.years() + ' anos, ' + diff.months() + ' meses, ' + diff.days() + ' dias.'; //apresenta valor por diff
   }
 
   createPaciente(): void {
-    console.table(this.paciente)
-    this.pacienteService.create(this.paciente).subscribe(() => {
-      this.pacienteService.showMessage('Paciente criado com sucesso!');
-     this.router.navigate(['/pacientes']);
+    this.pacienteService.create(this.paciente).subscribe(() => { //servico do paciente cria novos campos para paciente novo
+     this.router.navigate(['/pacientes']); //navega para /pacientes após
     });
   }
 
   cancel(): void {
-   this.router.navigate(['/pacientes']);
+   this.router.navigate(['/pacientes']); //retorna /pacientes
   }
 }

@@ -1,6 +1,7 @@
 import { Paciente } from './../componentes/model/paciente.model';
 import { Component, OnInit } from '@angular/core';
-
+import {Inject} from '@angular/core';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { PacienteService } from '../componentes/service/paciente.service';
 import { Router } from '@angular/router';
 
@@ -10,10 +11,11 @@ import { Router } from '@angular/router';
   templateUrl: './cadastropaciente.component.html',
   styleUrls: ['./cadastropaciente.component.scss']
 })
+
 export class CadastropacienteComponent implements OnInit {
   paciente: Paciente;
 
-  constructor(
+  constructor( //injeção de dependencia, se trata de importações proprias
     private router: Router,
     private pacienteService: PacienteService,
   ) {

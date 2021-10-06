@@ -28,12 +28,10 @@ export class EnderecopacienteComponent implements OnInit {
 
   }
   consulta(){
-    this.cepService
-    .consultar(this.cep.cep)
-    .subscribe((cep:any) => {
+    this.cepService //chama serviço
+    .consultar(this.cep.cep) //consulta o cep informado na variavel cep
+    .subscribe((cep:any) => { //subscreve os campos
       Object.assign(this.cep,cep)
-      console.log(this.cep)
-      console.log(cep)
     });
   }
   createPaciente(): void {

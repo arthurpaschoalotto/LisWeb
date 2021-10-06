@@ -2,11 +2,21 @@
 
   <div class="p-3 col-sm-12 row">
     <div class="col-sm-1 m-1">
-      <button mat-mini-fab color="primary" aria-expanded="false" routerLink="/cadastropaciente">
+      <button mat-mini-fab color="primary" aria-expanded="false" data-bs-toggle="modal" data-bs-target="#cadastropaciente">
         <mat-icon>add</mat-icon>
       </button>
      <mat-label class="ms-1 fs-6"></mat-label>
     </div>
+
+    <div class="modal fade" id="cadastropaciente" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-lg">
+      <div class="modal-content">
+        <div class="modal-body">
+          <app-cadastropaciente></app-cadastropaciente>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <div class="col-sm-1 m-1">
       <button mat-mini-fab color="primary" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">

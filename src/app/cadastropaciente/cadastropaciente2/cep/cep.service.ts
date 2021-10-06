@@ -12,8 +12,8 @@ export class CepService {
   cep = new Cep();
   constructor(private http:HttpClient) { }
 
-  public consultar(cep:string): Observable<Cep>{
-    return this.http.get<Cep>(`https://viacep.com.br/ws/${cep}/json/`)
+  public consultar(cep:string): Observable<Cep>{ //consultar Cep
+    return this.http.get<Cep>(`https://viacep.com.br/ws/${cep}/json/`) //http orientado ao site de consulta
 
   }
 

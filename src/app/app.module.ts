@@ -1,3 +1,4 @@
+import { Paciente } from './componentes/model/paciente.model';
 import {MatSortModule} from '@angular/material/sort';
 import { TipoinstrumentoComponent } from './tipoinstrumento/tipoinstrumento.component';
 import { ListainterfaceamentosComponent } from './cadastrointerfaceamento/listainterfaceamentos/listainterfaceamentos.component';
@@ -57,6 +58,8 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { PlanosaudepacienteComponent } from './cadastropaciente/cadastropaciente2/planosaudepaciente/planosaudepaciente.component';
 import { InfadcpacienteComponent } from './cadastropaciente/cadastropaciente2/infadcpaciente/infadcpaciente.component';
 import { PacientesComponent } from './pacientes/pacientes.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MostrarpacienteComponent } from './mostrarpaciente/mostrarpaciente.component';
 
 
 registerLocaleData(localePt, 'pt')
@@ -84,9 +87,13 @@ const appRoutes: Routes=[
     EnderecopacienteComponent,
     PlanosaudepacienteComponent,
     InfadcpacienteComponent,
-    PacientesComponent
+    PacientesComponent,
+    MostrarpacienteComponent
   ],
   imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
     MatSortModule,
     MatTabsModule,
     MatMomentDateModule,
@@ -120,6 +127,7 @@ const appRoutes: Routes=[
     RouterModule.forRoot(appRoutes),
     routing
   ],
+  entryComponents:[PacientesComponent],
   providers: [
     { provide: MAT_MOMENT_DATE_ADAPTER_OPTIONS, useValue: {useUtc: true}},
     { provide: MAT_MOMENT_DATE_ADAPTER_OPTIONS, useValue: {strict: true}},

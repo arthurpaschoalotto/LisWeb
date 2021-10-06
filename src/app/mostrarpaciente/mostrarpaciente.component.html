@@ -1,0 +1,165 @@
+<div class="example-container">
+
+</div>
+
+<form class= "example-container row container-fluid" fxShow.gt-xs>
+
+  <div class="row justify-content-around">
+
+    <div class="row col-md-6 p-2">
+      <mat-form-field appearance="fill">
+        <mat-label>Nome Paciente</mat-label>
+        <input matInput #nome readonly [type]="hideNome ? 'password' : 'text'">
+
+        <button mat-icon-button matSuffix (click)="nome.readOnly = !nome.readOnly" [attr.aria-label]="'disable password'">
+          <mat-icon>{{nome.readOnly ? 'edit_off' : 'edit'}}</mat-icon>
+        </button>
+
+        <button mat-icon-button matSuffix (click)="hideNome = !hideNome" [attr.aria-label]="'hide password'" [attr.aria-pressed]="nome.readOnly">
+          <mat-icon>{{hideNome ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+
+      </mat-form-field>
+    </div>
+
+    <div class="row col-md-3 p-2">
+      <mat-form-field appearance="fill" id="datanascimentopaciente">
+        <mat-label>Data de nascimento</mat-label>
+        <input matInput #datanascimento readonly type="date" id="datanascimentopaciente" name="data_nascimento">
+
+        <button mat-icon-button matSuffix (click)="datanascimento.readOnly = !datanascimento.readOnly" [attr.aria-label]="'disable password'">
+          <mat-icon>{{datanascimento.readOnly ? 'edit_off' : 'edit'}}</mat-icon>
+        </button>
+
+        <button mat-icon-button matSuffix (click)="hideDataNascimento = !hideDataNascimento" [attr.aria-label]="'hide password'" [attr.aria-pressed]="nome.readOnly">
+          <mat-icon>{{hideDataNascimento ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+
+      </mat-form-field>
+    </div>
+
+    <div class="row col-md-3 p-2">
+      <mat-form-field appearance="fill">
+        <mat-label>Idade:</mat-label>
+        <input matInput readonly #input name="idade_paciente"[type]="hideIdade ? 'password' : 'text'">
+
+        <button mat-icon-button matSuffix (click)="hideIdade = !hideIdade" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hideIdade">
+          <mat-icon>{{hideIdade ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+
+      </mat-form-field>
+    </div>
+
+  </div>
+
+  <div class="row justify-content-around">
+
+    <div class="row col-md-3 p-2">
+      <mat-form-field appearance="fill">
+        <mat-label>RG:</mat-label>
+        <input matInput #rg maxlength="12" mask="00.000.000-0" name="rg" readonly name="idade_paciente"[type]="hideRG ? 'password' : 'text'">
+
+        <button mat-icon-button matSuffix (click)="rg.readOnly = !rg.readOnly" [attr.aria-label]="'disable password'">
+          <mat-icon>{{rg.readOnly ? 'edit_off' : 'edit'}}</mat-icon>
+        </button>
+
+        <button mat-icon-button matSuffix (click)="hideRG = !hideRG" [attr.aria-label]="'hide password'" [attr.aria-pressed]="hideRG">
+          <mat-icon>{{hideRG ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+
+      </mat-form-field>
+    </div>
+
+    <div class="row col-md-3 p-2">
+      <mat-form-field appearance="fill">
+        <mat-label>CPF:</mat-label>
+        <input matInput #cpf maxlength="14" mask="000.000.000-00" name="cpf" readonly name="idade_paciente"[type]="hideCPF ? 'password' : 'text'">
+
+        <button mat-icon-button matSuffix (click)="cpf.readOnly = !cpf.readOnly" [attr.aria-label]="'disable password'">
+          <mat-icon>{{cpf.readOnly ? 'edit_off' : 'edit'}}</mat-icon>
+        </button>
+
+        <button mat-icon-button matSuffix (click)="hideCPF = !hideCPF" [attr.aria-label]="'hideCPF password'" [attr.aria-pressed]="hideCPF">
+          <mat-icon>{{hideCPF ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+
+      </mat-form-field>
+    </div>
+
+    <div class= "col-md-3 row p-2">
+      <mat-form-field appearance="fill">
+        <mat-label>Sexo</mat-label>
+
+        <button mat-icon-button matSuffix (click)="sexo.disabled = !sexo.disabled" [attr.aria-label]="'disable password'">
+          <mat-icon>{{sexo.disabled ? 'edit_off' : 'edit'}}</mat-icon>
+        </button>
+
+        <button mat-icon-button matSuffix (click)="hideSexo = !hideSexo" [attr.aria-label]="'hide password'" [attr.aria-pressed]="hideSexo">
+          <mat-icon>{{hideSexo ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+
+        <mat-select #sexo [disabled]="false" name="sexo">
+          <mat-option value="masc">{{hideSexo ? '*********' : 'Masculino'}}</mat-option>
+          <mat-option value="fem">{{'Feminino'}}</mat-option>
+          <mat-option value="sexoutros">{{'Outros'}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class= "col-md-3 row p-2">
+      <mat-form-field appearance="fill">
+        <mat-label>Cor</mat-label>
+        <input matInput readonly #cor name="idade_paciente"[type]="hideCor ? 'password' : 'text'">
+
+        <button mat-icon-button matSuffix (click)="readonly = !readonly" [attr.aria-label]="'disable password'">
+          <mat-icon>{{readonly ? 'edit_off' : 'edit'}}</mat-icon>
+        </button>
+
+        <button mat-icon-button matSuffix (click)="hideCor = !hideCor" [attr.aria-label]="'hide password'" [attr.aria-pressed]="hideCor">
+          <mat-icon>{{hideCor ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+
+        <mat-select name="cor">
+          <mat-option value="amarelo">Amarelo</mat-option>
+          <mat-option value="branco">Branco</mat-option>
+          <mat-option value="preto">Preto</mat-option>
+          <mat-option value="coroutros">Outros</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    </div>
+
+    <div class="row justify-content-around">
+      <div class="row col-md-6 p-2">
+        <mat-form-field appearance="fill">
+          <mat-label>Mãe:</mat-label>
+          <input matInput readonly #nomemae [type]="hideNomeMae ? 'password' : 'text'">
+
+          <button mat-icon-button matSuffix (click)="nomemae.readOnly = !nomemae.readOnly" [attr.aria-label]="'disable password'">
+            <mat-icon>{{nomemae.readOnly ? 'edit_off' : 'edit'}}</mat-icon>
+          </button>
+
+          <button mat-icon-button matSuffix (click)="hideNomeMae = !hideNomeMae" [attr.aria-label]="'hide password'" [attr.aria-pressed]="hideNomeMae">
+            <mat-icon>{{hideNomeMae ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+
+        </mat-form-field>
+      </div>
+
+      <div class="row col-md-6 p-2">
+        <mat-form-field appearance="fill">
+          <mat-label>Pai:</mat-label>
+          <input matInput readonly #nomepai [type]="hideNomePai ? 'password' : 'text'">
+
+          <button mat-icon-button matSuffix (click)="nomepai.readOnly = !nomepai.readOnly" [attr.aria-label]="'disable password'">
+            <mat-icon>{{nomepai.readOnly ? 'edit_off' : 'edit'}}</mat-icon>
+          </button>
+
+          <button mat-icon-button matSuffix (click)="hideNomePai = !hideNomePai" [attr.aria-label]="'hide password'" [attr.aria-pressed]="hideNomePai">
+            <mat-icon>{{hideNomePai ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+
+        </mat-form-field>
+      </div>
+    </div>
+  </form>
