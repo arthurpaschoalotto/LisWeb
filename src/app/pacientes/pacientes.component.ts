@@ -58,6 +58,7 @@ export class PacientesComponent implements AfterViewInit {
     this.loadBack();
   }
 
+  // TODO: #10 Iniciar discussao da padronizacao dos nomes de metodos
   loadBack(queries: Query[] = this.queries, refresh: boolean = true): void{ //Ponte com service
     this.pacienteService.read(queries,this.page,this.sort.active,this.sort.direction).subscribe( (pacientes)=>{
       if (pacientes.length == 0){ //não mostra botão se não tiver mais itens do back

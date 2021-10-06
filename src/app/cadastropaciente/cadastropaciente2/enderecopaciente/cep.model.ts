@@ -7,3 +7,4 @@ export class Cep{
   uf: string ="";
   ibge: string ="";
 }
+// TODO: #16 Se possivel centralizar models numa mesma pasta
