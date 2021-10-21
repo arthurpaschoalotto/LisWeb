@@ -39,7 +39,7 @@ export class SidebaradmComponent implements OnInit {
                       {title:'Recepção', icon:'/assets/recepcao.png',routerlink:'##', subitens:[
                         {title:'Nova Requisição',routerlink:'#'},
                         {title:'Requisições'},
-                        {title:'Pacientes',routerlink:'pacientes'}
+                        {title:'Pacientes',routerlink:'recepcao/pacientes'}
                       ]},
                       {title:'Coleta', icon:'/assets/coleta.png',routerlink:'###', subitens:[
                         {title:'Registro de Coleta'},

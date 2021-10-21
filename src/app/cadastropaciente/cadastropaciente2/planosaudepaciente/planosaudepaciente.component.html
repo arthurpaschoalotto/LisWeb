@@ -5,7 +5,7 @@
     <div class= "col-lg-3 row p-2">
       <mat-form-field appearance="fill">
         <mat-label>Convênio:</mat-label>
-        <mat-select>
+        <mat-select name="convenio" [(ngModel)]="paciente.convenio">
           <mat-option *ngFor="let conv of convenios" value="">
             {{conv}}</mat-option>
         </mat-select>
@@ -15,21 +15,21 @@
     <div class="row col-lg-6 p-2">
       <mat-form-field appearance="fill">
         <mat-label>Titular:</mat-label>
-        <input matInput #input maxlength="50">
+        <input matInput #input maxlength="50" name="titular_conv" [(ngModel)]="paciente.titular_conv">
       </mat-form-field>
     </div>
 
     <div class="row col-lg-3 p-2">
       <mat-form-field appearance="fill">
         <mat-label>Carteirinha:</mat-label>
-        <input matInput #input maxlength="50">
+        <input matInput #input maxlength="50" name="carteirinha_conv" [(ngModel)]="paciente.carteirinha_conv">
       </mat-form-field>
     </div>
 
     <div class="row col-lg-3 p-2">
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Validade</mat-label>
-        <input matInput [matDatepicker]="picker">
+        <input matInput [matDatepicker]="picker" name="validade_conv" [(ngModel)]="paciente.validade_conv">
         <mat-datepicker-toggle matSuffix [for]="picker">
           <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
         </mat-datepicker-toggle>
@@ -40,7 +40,7 @@
     <div class="row col-lg-3 p-2">
       <mat-form-field appearance="fill">
         <mat-label>CNS:</mat-label>
-        <input matInput #input maxlength="15">
+        <input matInput #input maxlength="15" name="cns_conv" [(ngModel)]="paciente.cns_conv">
       </mat-form-field>
     </div>
   </div>

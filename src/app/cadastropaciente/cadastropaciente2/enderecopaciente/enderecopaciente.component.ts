@@ -13,6 +13,7 @@ import { PacienteService } from 'src/app/componentes/service/paciente.service';
 })
 export class EnderecopacienteComponent implements OnInit {
   cep: Cep;
+
   @Input('paciente') paciente: Paciente;
 
   constructor(
@@ -29,9 +30,10 @@ export class EnderecopacienteComponent implements OnInit {
   }
   consulta(){
     this.cepService //chama serviço
-    .consultar(this.cep.cep) //consulta o cep informado na variavel cep
+    .consultar(this.paciente.cep as unknown as string) //consulta o cep informado na variavel cep
     .subscribe((cep:any) => { //subscreve os campos
-      Object.assign(this.cep,cep)
+      Object.assign(this.cep,cep);
+      Object.assign(this.paciente, this.cep);
     });
   }
   createPaciente(): void {

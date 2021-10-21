@@ -1,7 +1,9 @@
-<div class="mscustom">
+<!-- trocar mscustom para rout -->
+<div>
   <app-cadastropaciente1 [paciente]='this.paciente'></app-cadastropaciente1>
   <app-cadastropaciente2 [paciente]='this.paciente'></app-cadastropaciente2>
-  <button mat-flat-button color="primary" class="fixed-bottom" data-bs-dismiss="modal"
+  <button mat-flat-button color="primary" class="fixed-bottom index"
           (click)="createPaciente()">Salvar</button>
-  <button mat-flat-button color="primary" class="fixed-bottom ms-3" data-bs-dismiss="modal">Fechar</button>
+          <button mat-flat-button color="warn" class="fixed-bottom index ms-2"
+          (click)="cancel()">Cancelar</button>
 </div>

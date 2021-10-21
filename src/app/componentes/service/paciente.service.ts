@@ -9,7 +9,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
   providedIn: 'root',
 })
 export class PacienteService {
-  baseUrl = 'http://127.0.0.1:3000/pacientes.json'; //caminho backend
+  baseUrl = 'http://127.0.0.1:3000/pacientes'; //caminho backend
 
   query: Query[] = []; //chamando variaveis de busca
 

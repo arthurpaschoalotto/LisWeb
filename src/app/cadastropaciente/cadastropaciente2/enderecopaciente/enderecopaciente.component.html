@@ -5,8 +5,8 @@
     <div class="row col-lg-3 p-2">
       <mat-form-field appearance="fill">
         <mat-label for="cep">CEP:</mat-label>
-        <input matInput #input maxlength="9" mask="00000-000" id="cep" name="cep"
-               [(ngModel)]="cep.cep" [(ngModel)]="paciente.cep"
+        <input matInput maxlength="9" mask="00000-000" id="cep" name="cep"
+               [(ngModel)]="paciente.cep"
                (ngModelChange)="consulta()">
       </mat-form-field>
     </div>
@@ -14,55 +14,55 @@
     <div class="row col-lg-4 p-2">
       <mat-form-field appearance="fill">
         <mat-label>Cidade:</mat-label>
-        <input matInput #input maxlength="50" id="enderecoCidade" name="localidade"
-               [(ngModel)]="cep.localidade" [(ngModel)]="paciente.localidade">
+        <input matInput maxlength="50" id="enderecoCidade" name="localidade"
+               [(ngModel)]="paciente.localidade">
       </mat-form-field>
     </div>
 
     <div class="row col-lg-2 p-2">
       <mat-form-field appearance="fill">
         <mat-label>UF:</mat-label>
-        <input matInput #input maxlength="50" id="enderecoUf" name="uf"
-               [(ngModel)]="cep.uf" [(ngModel)]="paciente.uf">
+        <input matInput maxlength="50" id="enderecoUf" name="uf"
+              [(ngModel)]="paciente.uf">
       </mat-form-field>
     </div>
 
     <div class="row col-lg-3 p-2">
       <mat-form-field appearance="fill">
         <mat-label>Cod. IBGE:</mat-label>
-        <input matInput #input maxlength="50" id="enderecoIbge" name="ibge"
-               [(ngModel)]="cep.ibge" [(ngModel)]="paciente.ibge">
+        <input matInput maxlength="50" id="enderecoIbge" name="ibge"
+               [(ngModel)]="paciente.ibge">
       </mat-form-field>
     </div>
 
     <div class="row col-lg-3 p-2">
       <mat-form-field appearance="fill">
         <mat-label>Logradouro:</mat-label>
-        <input matInput #input maxlength="50" id="enderecoLogradouro" name="logradouro"
-              [(ngModel)]="cep.logradouro" [(ngModel)]="paciente.logradouro">
+        <input matInput maxlength="50" id="enderecoLogradouro" name="logradouro"
+              [(ngModel)]="paciente.logradouro" [value]="this.cep.logradouro">
       </mat-form-field>
     </div>
 
     <div class="row col-lg-3 p-2">
       <mat-form-field appearance="fill">
         <mat-label>N°:</mat-label>
-        <input matInput #input maxlength="50" id="enderecoNum" name="numero" [(ngModel)]="paciente.numero">
+        <input matInput maxlength="50" id="enderecoNum" name="numero" [(ngModel)]="paciente.numero">
       </mat-form-field>
     </div>
 
     <div class="row col-lg-3 p-2">
       <mat-form-field appearance="fill">
         <mat-label>Complemento:</mat-label>
-        <input matInput #input maxlength="50" id="enderecoComp" name="complemento"
-               [(ngModel)]="cep.complemento" [(ngModel)]="paciente.complemento">
+        <input matInput maxlength="50" id="enderecoComp" name="complemento"
+               [(ngModel)]="paciente.complemento">
       </mat-form-field>
     </div>
 
     <div class="row col-lg-3 p-2">
       <mat-form-field appearance="fill">
         <mat-label>Bairro:</mat-label>
-        <input matInput #input maxlength="50" id="enderecoBairro" name="bairro"
-               [(ngModel)]="cep.bairro" [(ngModel)]="paciente.bairro">
+        <input matInput maxlength="50" id="enderecoBairro" name="bairro"
+               [(ngModel)]="paciente.bairro">
       </mat-form-field>
     </div>
 

@@ -42,7 +42,4 @@ export class Cadastropaciente1Component implements OnInit {
     });
   }
 
-  cancel(): void {
-   this.router.navigate(['/pacientes']); //retorna /pacientes
-  }
 }
